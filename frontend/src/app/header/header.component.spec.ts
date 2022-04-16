@@ -24,23 +24,27 @@ describe(HeaderComponent.name, () => {
     });
 
     it(`(D) Should display "userLogged" when bound to properties`, () => {
-        let user = 'Test Unitary';
+        fixture.detectChanges();
+        const users = {
+            userName: 'Angular Game',
+            image: 'assets/images/google.png'
+        };
 
-        component.user = true;
-        component.userName = user;
+        component.user.push(users);
         fixture.detectChanges();
 
         const userLogged: HTMLImageElement = fixture.nativeElement.querySelector('#user-logged');
         const login: HTMLImageElement = fixture.nativeElement.querySelector('#login');
         const userName: HTMLImageElement = fixture.nativeElement.querySelector('span');
+        const image: HTMLImageElement = fixture.nativeElement.querySelector('#image_login');
 
         expect(userLogged).toBeTruthy();
+        expect(userName.innerText).toBe(users.userName);
+        expect(image.getAttribute('src')).toBe(users.image);
         expect(login).toBeNull();
-        expect(userName.innerText).toBe(user);
     });
 
     it(`(D) Should display "login" when bound to properties`, () => {
-        component.user = false;
         fixture.detectChanges();
 
         const userLogged: HTMLImageElement = fixture.nativeElement.querySelector('#user-logged');
