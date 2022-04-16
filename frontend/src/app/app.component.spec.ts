@@ -1,22 +1,27 @@
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+import { loader } from './shared/utils/http-loader-factory';
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+describe('AppComponent', () => {
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [
+                RouterTestingModule,
+                HttpClientModule,
+                TranslateModule.forRoot({ loader })
+            ],
+            declarations: [AppComponent],
+        }).compileComponents();
+    });
+
+    it('should create the app', () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        const app = fixture.componentInstance;
+        expect(app).toBeTruthy();
+    });
 });

@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  ENABLE_PURGE: true
+    production: false,
+    ENABLE_PURGE: true
 };
 
 /*
