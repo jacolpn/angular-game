@@ -1,0 +1,18 @@
+<nav class="wrapper_header">
+    <img class="logo" [routerLink]="['/']" src="assets/images/logo.png">
+
+    <div id="user-logged" class="login" *ngIf="user[0]?.userName">
+        <img id="image_login" class="image_login" [routerLink]="['/']" [src]="user[0]?.image">
+
+        <div class="container_text_login">
+            <p class="text_user">Olá <span>{{ user[0]?.userName }}</span></p>
+            <p class="sign_out" (click)="null">sair</p>
+        </div>
+    </div>
+
+    <div id="login" class="container_sign_in" *ngIf="!user[0]?.userName">
+        <img class="google_icon" src="assets/images/google.png">
+
+        <a class="text_sign_in" (click)="null">Entrar</a>
+    </div>
+</nav>
