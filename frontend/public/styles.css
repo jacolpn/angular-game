@@ -593,6 +593,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/images/saturn.svg');
 }
 
+.bg-\[url\(\'\/assets\/images\/planet-saturn\.svg\'\)\] {
+  background-image: url('/assets/images/planet-saturn.svg');
+}
+
 .from-purple-600 {
   --tw-gradient-from: #9333ea;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(147 51 234 / 0));
@@ -727,14 +731,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (max-width: 639px) {
-  .sm\:border-r {
-    border-right-width: 1px;
-  }
-
-  .sm\:border-l {
-    border-left-width: 1px;
-  }
-
   .sm\:pt-3 {
     padding-top: 0.75rem;
   }
