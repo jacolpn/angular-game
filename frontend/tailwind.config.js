@@ -11,7 +11,12 @@ module.exports = {
     },
     content: ["./src/**/*.{html,js}"],
     theme: {
-        extend: {},
+        extend: {
+            screens: {
+                'sm': {'max': '639px'},
+                // => @media (min-width: 640px) { ... }
+            },
+        },
     },
     variants: {},
     plugins: [],

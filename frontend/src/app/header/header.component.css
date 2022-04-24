@@ -5,13 +5,14 @@
 @layer components {
     .wrapper_header {
         @apply
-            bg-slate-900
+            bg-slate-800
             text-slate-200
             px-4
             py-0.5
             flex
             justify-between
-            items-center;
+            items-center
+            border-b border-slate-700;
     }
 
     .logo {
@@ -39,7 +40,7 @@
     }
 
     .container_sign_in {
-        @apply flex justify-center items-center rounded-lg bg-slate-600;
+        @apply flex justify-center items-center rounded-lg bg-slate-700;
     }
 
     .google_icon {
@@ -52,7 +53,7 @@
             pl-2
             pr-2
             text-slate-200
-            bg-slate-600 hover:bg-blue-500
+            bg-slate-700 hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-700
             rounded-r-lg
             cursor-pointer;
     }
