@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { loader } from './shared/utils/http-loader-factory';
+import { HomePageModule } from './pages/home-page/home-page.module';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { loader } from './shared/utils/http-loader-factory';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        HomePageModule,
         TranslateModule.forRoot({ loader })
     ],
     providers: [],

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { TranslateModule } from '@ngx-translate/core';
+
 import { HomePageComponent } from './home-page.component';
 import { InitialGameComponent } from './initial-game/initial-game.component';
 
@@ -9,7 +12,8 @@ import { InitialGameComponent } from './initial-game/initial-game.component';
     InitialGameComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule
   ]
 })
 export class HomePageModule { }

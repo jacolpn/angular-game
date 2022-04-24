@@ -2,49 +2,51 @@
     <div class="w-full">
         <div class="first_container">
             <div>
-                <h1 class="h1">Estude <span class="text-slate-50">Angular</span> de uma forma divertida</h1>
+                <h1 class="h1">{{ 'title-home' | translate }}</h1>
 
-                <h3 class="h3">Chega de cursos, vídeos e artigos chatos.</h3>
-                <h3 class="h3">Aprenda a codificar de uma maneira nova, divertida e eficaz.</h3>
+                <h3 class="h3">{{ 'subtitle-first-home' | translate }}</h3>
+                <h3 class="h3">{{ 'subtitle-second-home' | translate }}</h3>
 
-                <button class="button mt-10">Jogar & Aprender Angular</button>
+                <button class="button mt-10">{{ 'button-play-home' | translate }}</button>
 
-                <p class="subtitle_button">Junte-se a mais de 2 pessoas que começaram a jogar</p>
+                <p class="subtitle_button mb-10">{{ 'button-subtitle-home' | translate }}</p>
+
+                <app-initial-game></app-initial-game>
             </div>
         </div>
 
         <div class="second_container">
-            <h2 class="h2 pt-5">A aprendizagem tradicional tem DOIS GRANDES PROBLEMAS</h2>
+            <h2 class="h2 pt-5">{{ 'title-two-problem' | translate }}</h2>
 
             <div class="container_two_problem">
                 <div>
-                    <h3 class="h3">Problema nº 1: Falta de prática</h3>
+                    <h3 class="h3">{{ 'title-first-problem' | translate }}</h3>
 
                     <div class="wrapper_text_first_problem">
                         <div class="container_text_first_problem">
-                            <p>De acordo com a pesquisa em neurociência, o essencial na aprendizagem é a prática. Quanto mais praticamos, mais eficazmente nosso cérebro armazena as informações aprendidas para acesso posterior. No entanto, o aprendizado tradicional é o oposto da prática.</p>
-                            <p>Quantas vezes você abriu um editor de código e começou a codificar depois de assistir a outro tutorial de codificação? Provavelmente não o suficiente. Mas o problema não é com você. É a maneira como você aprende.</p>
-                            <p>Vídeos codificados são projetados para serem consumidos como programas de TV. Como resultado, todas as horas gastas "aprendendo" se transformam em horas gastas "observando a teoria". E apenas a teoria sem prática leva ao aprendizado improdutivo. Especialmente ao aprender a codificar.</p>
+                            <p>{{ 'paragraph-one-first-problem' | translate }}</p>
+                            <p>{{ 'paragraph-two-first-problem' | translate }}</p>
+                            <p>{{ 'paragraph-three-first-problem' | translate }}</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="sm:pt-3">
-                    <h3 class="h3">Problema nº 2: baixo envolvimento</h3>
+                    <h3 class="h3">{{ 'title-second-problem' | translate }}</h3>
 
                     <div class="wrapper_text_second_problem">
                         <div class="container_text_second_problem">
-                            <p>De acordo com a pesquisa da neurociência, precisamos garantir que o aprendizado seja envolvente e aproveite o lado emocional do cérebro, por meio do humor, da narrativa e dos jogos. A ênfase no racional e lógico por si só não produz memórias fortes.</p>
-                            <p>E você se lembra da última vez que assistiu a um tutorial de codificação ou leu um artigo que não era chato? Difícil de lembrar de uma vez, certo? Isso porque a maior parte do conteúdo educacional é entediante.</p>
-                            <p>O tédio leva à falta de foco e à procrastinação, o que o impede de permanecer engajado e de se lembrar de tudo o que aprendeu.</p>
+                            <p>{{ 'paragraph-one-second-problem' | translate }}</p>
+                            <p>{{ 'paragraph-two-second-problem' | translate }}</p>
+                            <p>{{ 'paragraph-three-second-problem' | translate }}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h2 class="h2 pt-5">Solução?</h2>
+            <h2 class="h2 pt-5">{{ 'solution' | translate }}</h2>
 
-            <p class="pb-5">Combine toneladas de prática com um ambiente envolvente e interativo onde você aprende fazendo.</p>
+            <p class="pb-5">{{ 'subtitle-solution' | translate }}</p>
 
             <div class="flex justify-center items-center pb-5">
                 <div class="gif_simulation">GIF</div>
@@ -53,27 +55,27 @@
 
         <div class="third_container">
             <div>
-                <h2 class="h2">Nossa missão</h2>
+                <h2 class="h2">{{ 'title-mission' | translate }}</h2>
 
-                <h3 class="h3">Tornando o aprendizado de código mais eficiente, interessante e divertido.</h3>
+                <h3 class="h3">{{ 'subtitle-mission' | translate }}</h3>
 
                 <div class="wrapper_text_third_problem">
                     <div class="container_text_third_problem">
-                        <p>Olá, meu nome é Jackson. Sou o fundador do Angular Fantasy. Eu programo há mais de 7 anos e aprendi a codificar usando métodos tradicionais.</p>
-                        <p>Eu me lembro daqueles dias. Quantas vezes me forcei a sentar e aprender a programar. Como artigos e documentação me pareciam enfadonhos. O quanto me faltou prática e por causa desse conhecimento rapidamente desapareceu. Aprender não deveria ser assim, então decidi mudar.</p>
-                        <p>Comecei com os fundamentos e estudei como nosso cérebro aprende. A neurociência diz que o aprendizado eficaz requer (1) muita prática e (2) um senso de que o aprendizado é envolvente. Exatamente o que costuma ser esquecido nas formas tradicionais de aprendizagem. Exatamente por isso que tive dificuldade em aprender a programar. E exatamente o que precisava ser mudado.</p>
-                        <p>Criei Angular Fantasy como uma maneira nova e mais eficiente de aprender código. Os jogos são uma das melhores combinações de (1) prática e (2) um ambiente de aprendizagem envolvente. Eles são o próximo passo lógico da educação tradicional. Eles são o futuro da aprendizagem. E minha missão e missão do Angular Fantasy é fazer desse futuro nossa realidade.</p>
+                        <p>{{ 'paragraph-one-mission' | translate }}</p>
+                        <p>{{ 'paragraph-two-mission' | translate }}</p>
+                        <p>{{ 'paragraph-three-mission' | translate }}</p>
+                        <p>{{ 'paragraph-four-mission' | translate }}</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="fourth_container mb-10">
-            <h2 class="h2 pt-5">Pronto para começar sua aventura?</h2>
+            <h2 class="h2 pt-5">{{ 'title-fourth-container' | translate }}</h2>
 
-            <p>Junte-se a mais de 2 pessoas que começaram a jogar</p>
+            <p>{{ 'button-subtitle-home' | translate }}</p>
 
-            <button class="button mt-8">Jogar & Aprender Angular</button>
+            <button class="button mt-8">{{ 'button-play-home' | translate }}</button>
         </div>
     </div>
 </section>
