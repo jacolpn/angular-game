@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { TestBed } from '@angular/core/testing';
@@ -16,10 +17,11 @@ describe('AppComponent', () => {
                 TranslateModule.forRoot({ loader })
             ],
             declarations: [AppComponent],
+            schemas: [NO_ERRORS_SCHEMA]
         }).compileComponents();
     });
 
-    it('should create the app', () => {
+    it('Should create the app', () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
         expect(app).toBeTruthy();

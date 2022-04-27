@@ -4,6 +4,8 @@
     "logOut": "sair",
     "logIn": "Entrar",
     "solution": "Solução?",
+    "interpolation": "{{ interpolation }}",
+    "note": "Nota:",
 
     "title-home": "Estude Angular de uma forma divertida",
     "subtitle-first-home": "Chega de cursos, vídeos e artigos chatos.",
@@ -26,5 +28,8 @@
     "paragraph-two-mission": "Eu me lembro daqueles dias. Quantas vezes me forcei a sentar e aprender a programar. Como artigos e documentação me pareciam enfadonhos. O quanto me faltou prática e por causa desse conhecimento rapidamente desapareceu. Aprender não deveria ser assim, então decidi mudar.",
     "paragraph-three-mission": "Comecei com os fundamentos e estudei como nosso cérebro aprende. A neurociência diz que o aprendizado eficaz requer (1) muita prática e (2) um senso de que o aprendizado é envolvente. Exatamente o que costuma ser esquecido nas formas tradicionais de aprendizagem. Exatamente por isso que tive dificuldade em aprender a programar. E exatamente o que precisava ser mudado.",
     "paragraph-four-mission": "Criei Angular Fantasy como uma maneira nova e mais eficiente de aprender código. Os jogos são uma das melhores combinações de (1) prática e (2) um ambiente de aprendizagem envolvente. Eles são o próximo passo lógico da educação tradicional. Eles são o futuro da aprendizagem. E minha missão e missão do Angular Fantasy é fazer desse futuro nossa realidade.",
-    "title-fourth-container": "Pronto para começar sua aventura?"
+    "title-fourth-container": "Pronto para começar sua aventura?",
+
+    "paragraph-example-game-home": "Utilize a interpolação escrevendo \"{{ interpolation }}\" no campo abaixo.",
+    "paragraph-game-home": "A interpolação de texto permite incorporar valores de string dinâmicos em seus modelos HTML. Use a interpolação para alterar dinamicamente o que aparece em uma visualização do aplicativo, como a exibição de uma saudação personalizada que inclui um \"Olá Mundo\"."
 }
