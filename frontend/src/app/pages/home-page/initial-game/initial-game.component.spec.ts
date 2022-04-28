@@ -38,9 +38,11 @@ describe('InitialGameComponent', () => {
 
         const inputGame: HTMLImageElement = fixture.nativeElement.querySelector('#input-game');
         const paragraphGame: HTMLImageElement = fixture.nativeElement.querySelector('#paragraph-game');
+        const loadingTyping: HTMLImageElement = fixture.nativeElement.querySelector('#loading-typing');
 
         expect(inputGame).toBeTruthy();
         expect(paragraphGame).toBeNull();
+        expect(loadingTyping).toBeNull();
     });
 
     it('(D) Should display "paragraphGame" and hidden "inputGame" when variable gameText is correct', () => {
@@ -49,8 +51,25 @@ describe('InitialGameComponent', () => {
 
         const inputGame: HTMLImageElement = fixture.nativeElement.querySelector('#input-game');
         const paragraphGame: HTMLImageElement = fixture.nativeElement.querySelector('#paragraph-game');
+        const loadingTyping: HTMLImageElement = fixture.nativeElement.querySelector('#loading-typing');
 
         expect(inputGame).toBeTruthy();
         expect(paragraphGame).toBeNull();
+        expect(loadingTyping).toBeNull();
+    });
+
+    it('(D) Should display "loadingTyping" when has value in variable gameText', () => {
+        component.gameText = 'typing';
+        fixture.detectChanges();
+
+        const loadingTyping: HTMLImageElement = fixture.nativeElement.querySelector('#loading-typing');
+
+        expect(loadingTyping).toBeTruthy();
+    });
+
+    it('onValidGame: Should return true when value is valid AND return false when value is invalid', () => {
+        expect(component.onValidGame('interpolation')).toBeTruthy();
+        expect(component.onValidGame('{{interpolation}}')).toBeTruthy();
+        expect(component.onValidGame('anyone')).not.toBeTruthy();
     });
 });

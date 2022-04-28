@@ -7,7 +7,7 @@
                 <h3 class="h3">{{ 'subtitle-first-home' | translate }}</h3>
                 <h3 class="h3">{{ 'subtitle-second-home' | translate }}</h3>
 
-                <button id="button" class="button mt-10">{{ 'button-play-home' | translate }}</button>
+                <button id="button-season" class="button mt-10" (click)="onNavigateSeason()">{{ 'button-play-home' | translate }}</button>
 
                 <p class="subtitle_button mb-10">{{ 'button-subtitle-home' | translate }}</p>
 
@@ -75,7 +75,7 @@
 
             <p>{{ 'button-subtitle-home' | translate }}</p>
 
-            <button class="button mt-8">{{ 'button-play-home' | translate }}</button>
+            <button id="button-season" class="button mt-8" (click)="onNavigateSeason()">{{ 'button-play-home' | translate }}</button>
         </div>
     </div>
 </section>

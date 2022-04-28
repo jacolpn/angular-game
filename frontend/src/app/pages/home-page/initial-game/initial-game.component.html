@@ -23,7 +23,7 @@
             <div class="flex w-6/12">
                 <img class="h-28" src="assets/images/man-astronaut.svg">
 
-                <img class="h-12" src="assets/images/loading.svg" *ngIf="gameText">
+                <img id="loading-typing" class="h-12" src="assets/images/loading.svg" *ngIf="!onValidGame(gameText) && gameText !== ''">
             </div>
         </div>
 
