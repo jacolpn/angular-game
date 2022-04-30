@@ -38,11 +38,15 @@
             w-52
             sm:w-44
             sm:text-xs
-            pl-4
+            pl-6
             pr-4
             border-2
             rounded-md
             outline-none
+            bg-[url('/assets/images/share-arrow.svg')]
+            bg-[length:20px_30px]
+            bg-no-repeat
+            fill-blue-500
             text-slate-200
             bg-purple-800
             border-purple-700
