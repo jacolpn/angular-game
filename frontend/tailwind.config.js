@@ -13,8 +13,8 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                'sm': {'max': '639px'},
-                // => @media (min-width: 640px) { ... }
+                'sm': {'max': '700px'},
+                // => @media (min-width: 700px) { ... }
             },
         },
     },

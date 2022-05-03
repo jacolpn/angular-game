@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SeasonPageComponent } from './season-page.component';
@@ -8,7 +9,8 @@ describe('SeasonPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeasonPageComponent ]
+      declarations: [ SeasonPageComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   });
@@ -19,7 +21,7 @@ describe('SeasonPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Should create component', () => {
     expect(component).toBeTruthy();
   });
 });

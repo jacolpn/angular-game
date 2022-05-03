@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .wrapper {
+        @apply
+            flex
+            justify-center
+            items-center
+        ;
+    }
+
+    .container {
+        @apply
+            w-8/12
+            sm:w-screen
+            sm:px-2
+            px-12
+            py-4
+            bg-gradient-to-r from-transparent via-purple-800 to-transparent
+        ;
+    }
+
+    .container-image {
+        @apply
+            flex
+            justify-center
+            items-end
+            pt-4
+            pb-4
+        ;
+    }
+
+    .input {
+        @apply
+            h-8
+            w-52
+            sm:w-44
+            sm:text-xs
+            pl-6
+            pr-4
+            border-2
+            rounded-md
+            outline-none
+            bg-[url('/assets/images/share-arrow.svg')]
+            bg-[length:20px_30px]
+            bg-no-repeat
+            fill-blue-500
+            text-slate-200
+            bg-purple-800
+            border-purple-700
+            focus-within:border-purple-800
+            focus-within:bg-purple-900
+        ;
+    }
+
+    .paragraph-interpolation {
+        @apply
+            w-52
+            bg-pink-700
+            border-pink-600
+            text-center
+            border-2
+            rounded-md
+            cursor-default;
+    }
+}

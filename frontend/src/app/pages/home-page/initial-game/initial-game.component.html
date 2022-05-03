@@ -1,1 +1,33 @@
-<p>initial-game works!</p>
+<div class="wrapper">
+    <div class="container">
+        <p><strong>{{ 'note' | translate }} </strong>{{ 'paragraph-example-game-home' | translate }}</p>
+
+        <div class="container-image">
+            <div class="w-6/12 mr-5 text-right flex justify-end">
+                <input
+                    autofocus
+                    id="input-game"
+                    class="input"
+                    placeholder="{{ 'interpolation' | translate }}"
+                    *ngIf="!onValidGame(gameText)"
+                    [(ngModel)]="gameText"
+                >
+                <p
+                    id="paragraph-game"
+                    class="paragraph-interpolation"
+                    *ngIf="onValidGame(gameText)"
+                >
+                    {{ gameTextResult }}
+                </p>
+            </div>
+
+            <div class="flex w-6/12">
+                <img class="h-28" src="assets/images/man-astronaut.svg">
+
+                <img id="loading-typing" class="h-12" src="assets/images/loading.svg" *ngIf="!onValidGame(gameText) && gameText !== ''">
+            </div>
+        </div>
+
+        <p>{{ 'paragraph-game-home' | translate }}</p>
+    </div>
+</div>
