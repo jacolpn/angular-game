@@ -31,5 +31,10 @@
     "title-fourth-container": "Pronto para começar sua aventura?",
 
     "paragraph-example-game-home": "Utilize a interpolação escrevendo \"{{ interpolation }}\" no campo abaixo.",
-    "paragraph-game-home": "A interpolação de texto permite incorporar valores de string dinâmicos em seus modelos HTML. Use a interpolação para alterar dinamicamente o que aparece em uma visualização do aplicativo, como a exibição de uma saudação personalizada que inclui um \"Olá Mundo\"."
+    "paragraph-game-home": "A interpolação de texto permite incorporar valores de string dinâmicos em seus modelos HTML. Use a interpolação para alterar dinamicamente o que aparece em uma visualização do aplicativo, como a exibição de uma saudação personalizada que inclui um \"Olá Mundo\".",
+
+    "module-introduction": "Módulo introdutório",
+    "module-intermediate": "Módulo intermediário",
+    "start-adventure": "Iniciar aventura",
+    "text-module-introduction": "Os primeiros seres humanos chegam em marte para iniciar o processo de terraformação e colonização do planeta, mas para isso, eles precisam controlar diversos aspectos da colonização, entrada e saída de novos colonos, suas habilidades, idade, etc. Para ajudar neste processo de controle, aparece um coleguinha alien para ensinar uma tecnologia supimpa para que os humanos consigam resolver esses problemas, de forma dinâmica e reativa."
 }

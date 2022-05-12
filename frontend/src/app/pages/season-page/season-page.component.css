@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrapper {
+        /* grid grid-cols-2 gap-4 */
+        @apply
+            flex
+            items-center
+            justify-center
+            p-4
+        ;
+    }
+
+    .container-first-level {
+        @apply
+            w-full
+            mb-4
+        ;
+    }
+
+    .title-module {
+        @apply
+            text-right
+            cursor-default
+            pr-2
+            text-lg
+            text-purple-300
+            font-bold
+            animate-pulse
+        ;
+    }
+
+    .first-level {
+        @apply
+            w-full
+            h-full
+            p-3
+            flex
+            rounded
+            cursor-default
+            border
+            border-slate-700
+            hover:shadow-sm
+            hover:shadow-slate-600
+            hover:bg-slate-800
+        ;
+    }
+
+    .container-image-button {
+        @apply
+            w-4/12
+            text-center
+        ;
+    }
+
+    .helmet-astronaut {
+        @apply
+            bg-[url('/assets/images/helmet-astronaut.svg')]
+            bg-cover
+            h-44
+            w-44
+        ;
+    }
+
+    .container-text {
+        @apply
+            w-8/12
+            text-justify
+        ;
+    }
+
+    .title-locked {
+        @apply
+            text-right
+            text-lg
+            pr-2
+            font-bold
+            text-slate-600
+            cursor-default
+        ;
+    }
+
+    .container-locked {
+        @apply
+            w-full
+            h-full
+            p-3
+            flex
+            items-center
+            justify-center
+            rounded
+            cursor-default
+            border
+            border-slate-800
+            hover:shadow-sm
+            hover:shadow-slate-800
+            /* hover:bg-slate-800 */
+        ;
+    }
+
+    .locked {
+        @apply
+            bg-[url('/assets/images/locked.svg')]
+            bg-cover
+            h-36
+            w-36
+        ;
+    }
+
+    .lockeds {
+        @apply
+            bg-[url('/assets/images/dor-spaceship.svg')]
+            grid
+            bg-cover
+            h-36
+            w-36
+        ;
+    }
+
+    .button {
+        @apply
+            py-2
+            px-4
+            rounded
+            bg-gradient-to-r from-purple-600 to-pink-600
+            hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-700
+        ;
+    }
+}

@@ -30,7 +30,11 @@
     "paragraph-four-mission": "I created Angular Fantasy as a new and more efficient way to learn code. Games are one of the best combinations of (1) practice and (2) an engaging learning environment. They are the next logical step from traditional education. They are the future of learning. And my mission and mission of Angular Fantasy is to make that future our reality.",
     "title-fourth-container": "Ready to start your adventure?",
 
-
     "paragraph-example-game-home": "Use an interpolation describing \"{{ interpolation }}\" in the field below.",
-    "paragraph-game-home": "Text interpolation lets you embed dynamic string values in your HTML templates. Use tweening to dynamically change what appears in an app preview, such as displaying a custom greeting that includes a \"Hello World\"."
+    "paragraph-game-home": "Text interpolation lets you embed dynamic string values in your HTML templates. Use tweening to dynamically change what appears in an app preview, such as displaying a custom greeting that includes a \"Hello World\".",
+
+    "module-introduction": "Introductory module",
+    "module-intermediate": "Intermediate module",
+    "start-adventure": "Start adventure",
+    "text-module-introduction": "The first humans arrive in Mars to start the process of terraforming and colonization of the planet, but for that, they need to control various aspects of colonization, entry and exit of new settlers, their skills, age, etc. To help with this control process, an Alien colleague appears to teach a suppim technology so that humans can solve these problems in a dynamic and reactive way."
 }
