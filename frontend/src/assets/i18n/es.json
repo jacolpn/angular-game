@@ -31,5 +31,10 @@
     "title-fourth-container": "¿Listo para comenzar tu aventura?",
 
     "paragraph-example-game-home": "Use una interpolación que describa \"{{interpolación }}\" en el campo a continuación.",
-    "paragraph-game-home": "La interpolación de texto le permite incrustar valores de cadena dinámicos en sus plantillas HTML. Utilice la interpolación para cambiar dinámicamente lo que aparece en la vista previa de una aplicación, como mostrar un saludo personalizado que incluya un \"Hola mundo\"."
+    "paragraph-game-home": "La interpolación de texto le permite incrustar valores de cadena dinámicos en sus plantillas HTML. Utilice la interpolación para cambiar dinámicamente lo que aparece en la vista previa de una aplicación, como mostrar un saludo personalizado que incluya un \"Hola mundo\".",
+
+    "module-introduction": "Módulo introductorio",
+    "module-intermediate": "Módulo intermediário",
+    "start-adventure": "Aventura iniciaria",
+    "text-module-introduction": "Los primeros humanos llegan a Marte para comenzar el proceso de terraformación y colonización del planeta, pero para eso, necesitan controlar varios aspectos de la colonización, entrada y salida de nuevos colonos, sus habilidades, edad, etc. Para ayudar con este proceso de control, un colega alienígena parece enseñar una tecnología supuesta para que los humanos puedan resolver estos problemas de manera dinámica y reactiva."
 }
