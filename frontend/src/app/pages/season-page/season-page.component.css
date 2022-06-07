@@ -38,6 +38,7 @@
             h-full
             p-3
             flex
+            sm:grid
             rounded
             cursor-default
             border
@@ -51,6 +52,8 @@
     .container-image-button {
         @apply
             w-4/12
+            sm:w-full
+            sm:mb-4
             text-center
         ;
     }
@@ -61,12 +64,15 @@
             bg-cover
             h-44
             w-44
+            sm:h-32
+            sm:w-32
         ;
     }
 
     .container-text {
         @apply
             w-8/12
+            sm:w-full
             text-justify
         ;
     }
