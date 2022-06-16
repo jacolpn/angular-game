@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+// import { user } from '../shared/mocks/header-mock';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,9 +13,6 @@ export class HeaderComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
-        // this.user = [{
-        //     userName: 'Angular Game',
-        //     image: 'assets/images/google.png'
-        // }];
+        // this.user = user;
     }
 }

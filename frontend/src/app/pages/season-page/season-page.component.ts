@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./season-page.component.css']
 })
 export class SeasonPageComponent implements OnInit {
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit(): void { }
+
+    onNavigateSeason(): any {
+        return this.router.navigate(['season/start-introduction']);
+    }
 }
