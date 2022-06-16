@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrapper {
+        @apply flex h-72;
+    }
+    .container-text {
+        @apply
+            grid
+            text-center
+            bg-slate-800
+            rounded-md
+            rounded-br-3xl
+            p-4
+            w-96
+            h-56
+            border
+            border-slate-700
+        ;
+    }
+
+    .box-text {
+        @apply mb-3 p-1 overflow-auto;
+    }
+
+    .box-button {
+        @apply flex justify-center h-9;
+    }
+
+    .button {
+        @apply
+            px-4
+            w-56
+            h-9
+            rounded-t-md
+            rounded-b-3xl
+            bg-gradient-to-r from-purple-600 to-pink-600
+            hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-700
+        ;
+    }
+
+    .container-robot {
+        @apply
+            flex
+            items-end
+            mt-20
+        ;
+    }
+
+    .first-balon {
+        @apply
+            h-4
+            w-4
+            mb-14
+            border
+            border-slate-700
+            rounded-full
+            bg-slate-800
+        ;
+    }
+
+    .second-balon {
+        @apply
+        h-2
+        w-2
+        rounded-full
+        mb-12
+        border
+        border-slate-700
+        bg-slate-800
+        ;
+    }
+
+    .robot {
+        @apply
+            animate-bounce
+            relative
+            inline-flex
+            rounded-full
+            h-16
+            w-16
+            bg-sky-500
+        ;
+    }
+
+    .ping-robot {
+        @apply
+            animate-ping
+            absolute
+            inline-flex
+            h-16
+            w-16
+            rounded-full
+            bg-sky-700
+            opacity-75
+        ;
+    }
+
+    .container-buttons {
+        @apply flex justify-end;
+    }
+
+    .button-back {
+        @apply
+            px-4
+            w-24
+            h-7
+            mr-1
+            rounded-l-sm
+            border-2
+            border-slate-700
+            hover:bg-slate-700
+        ;
+    }
+
+    .button-next {
+        @apply
+            px-4
+            w-24
+            h-7
+            rounded-tr-sm
+            rounded-br-2xl
+            bg-gradient-to-r from-purple-600 to-pink-600
+            hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-700
+            disabled:bg-gradient-to-r disabled:from-slate-600 disabled:to-slate-700
+        ;
+    }
+}

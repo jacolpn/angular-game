@@ -36,7 +36,6 @@ describe(HeaderComponent.name, () => {
     });
 
     it(`(D) Should display "userLogged" when bound to properties`, () => {
-        fixture.detectChanges();
         const users = {
             userName: 'Angular Game',
             image: 'assets/images/google.png'

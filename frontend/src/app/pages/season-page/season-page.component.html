@@ -7,7 +7,7 @@
             <p class="mb-2">{{ 'text-introduction-third' | translate }}</p>
         </div>
         <div class="wrapper">
-            <div class="w-2/4 sm:w-full">
+            <div class="w-3/4 sm:w-full">
                 <div class="container-first-level">
                     <p class="title-module">{{ 'season-first' | translate }}</p>
 
@@ -17,7 +17,7 @@
                                 <div class="helmet-astronaut"></div>
                             </div>
 
-                            <button id="button-season" class="button">{{ 'start-adventure' | translate }}</button>
+                            <button id="button-season" class="button" (click)="onNavigateSeason()">{{ 'start-adventure' | translate }}</button>
                         </div>
 
                         <div class="container-text">{{ 'text-season-first' | translate }}</div>

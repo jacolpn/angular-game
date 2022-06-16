@@ -7,6 +7,9 @@
     "interpolation": "{{ interpolation }}",
     "note": "Nota:",
     "introduction": "Introdução",
+    "start": "INÍCIO",
+    "back": "voltar",
+    "next": "avançar",
 
     "title-home": "Estude Angular de uma forma divertida",
     "subtitle-first-home": "Chega de cursos, vídeos e artigos chatos.",
