@@ -12,6 +12,10 @@ const routes: Routes = [
     {
 		path: 'start-introduction',
 		component: StartComponent
+	},
+	{
+		path: 'first',
+		loadChildren: () => import('./first-season/first-season.module').then(module => module.FirstSeasonModule)
 	}
 ];
 

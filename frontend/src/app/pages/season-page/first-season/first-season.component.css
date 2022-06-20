@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrapper {
+        @apply
+            flex
+            h-[86vh]
+            items-center
+            justify-center
+        ;
+    }
+
+    .container-main-glass {
+        @apply
+            w-[95vw]
+            h-[60vh]
+            border-x-2
+            border-t-2
+            border-slate-400
+            flex
+            bg-slate-600
+            items-center
+            justify-center
+            rounded-t-[200px]
+            p-4
+        ;
+    }
+
+    .main-glass {
+        @apply
+            w-[92vw]
+            h-full
+            rounded-b-lg
+            rounded-t-[200px]
+            border
+            border-slate-700
+            bg-[url('/assets/images/marte.jpg')]
+            bg-cover
+            flex
+            items-end
+        ;
+    }
+
+    .command-room {
+        @apply
+            w-[95vw]
+            h-[20vh]
+            border-x-2
+            border-b-2
+            border-slate-400
+            bg-slate-600
+            flex
+            items-end
+            justify-center
+            rounded-b-[100px]
+        ;
+    }
+
+    .command-details {
+        @apply
+            h-1
+            w-28
+            mb-1
+            bg-slate-700
+        ;
+    }
+
+    .command-bank {
+        @apply
+            h-40
+            w-52
+            flex
+            items-center
+            justify-center
+            rounded-t-3xl
+            bg-gray-800
+            border-t
+            border-x
+            border-gray-700
+            mx-14
+        ;
+    }
+
+    .command-bank-line {
+        @apply
+            h-[0.1rem]
+            w-28
+            bg-slate-300
+            -rotate-45
+        ;
+    }
+
+    .command-bank-all-head {
+        @apply
+            flex
+            justify-center
+            items-end
+        ;
+    }
+
+    .command-bank-head {
+        @apply
+            w-24
+            h-12
+            flex
+            items-end
+            justify-center
+            bg-stone-900
+            rounded-t-[41px]
+        ;
+    }
+
+    .command-head-line {
+        @apply
+            h-4
+            w-2
+            bg-slate-300
+        ;
+    }
+
+    .command-bank-ear-left {
+        @apply
+            w-2
+            h-3
+            bg-stone-900
+            rounded-tl-lg
+            mx-[-1px]
+        ;
+    }
+
+    .command-bank-ear-right {
+        @apply
+            w-2
+            h-3
+            bg-stone-900
+            rounded-tr-lg
+            mx-[-1px]
+        ;
+    }
+
+    .wrapper-command-button {
+        @apply
+            w-40
+            h-full
+            flex
+            items-start
+        ;
+    }
+
+    .container-command-button {
+        @apply
+            w-full
+            bg-slate-700
+            px-5
+            py-3
+            rounded-sm
+            mt-[-9px]
+        ;
+    }
+
+    .command-button-inactive {
+        @apply
+            h-8
+            mb-1
+            rounded
+            border
+            border-red-800
+            hover:border-red-700
+            bg-red-700
+            hover:bg-red-600
+        ;
+    }
+
+    .command-button-active {
+        @apply
+            h-8
+            mb-1
+            rounded
+            border
+            border-green-800
+            hover:border-green-700
+            bg-green-700
+            hover:bg-green-600
+        ;
+    }
+
+    .command-button-function {
+        @apply
+            text-[0.5rem]
+            text-right
+            text-slate-300
+            mr-1
+            mb-[0.1rem]
+        ;
+    }
+
+    .command-button-status {
+        @apply
+            mt-[-5px]
+            text-center
+            text-sm
+            font-bold
+        ;
+    }
+}

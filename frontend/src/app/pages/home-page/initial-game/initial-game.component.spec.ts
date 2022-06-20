@@ -36,9 +36,9 @@ describe('InitialGameComponent', () => {
     it('(D) Should display "inputGame" and hidden "paragraphGame" when init component', () => {
         fixture.detectChanges();
 
-        const inputGame: HTMLImageElement = fixture.nativeElement.querySelector('#input-game');
-        const paragraphGame: HTMLImageElement = fixture.nativeElement.querySelector('#paragraph-game');
-        const loadingTyping: HTMLImageElement = fixture.nativeElement.querySelector('#loading-typing');
+        const inputGame: HTMLElement = fixture.nativeElement.querySelector('#input-game');
+        const paragraphGame: HTMLElement = fixture.nativeElement.querySelector('#paragraph-game');
+        const loadingTyping: HTMLElement = fixture.nativeElement.querySelector('#loading-typing');
 
         expect(inputGame).toBeTruthy();
         expect(paragraphGame).toBeNull();
@@ -49,9 +49,9 @@ describe('InitialGameComponent', () => {
         component.onValidGame('interpolation');
         fixture.detectChanges();
 
-        const inputGame: HTMLImageElement = fixture.nativeElement.querySelector('#input-game');
-        const paragraphGame: HTMLImageElement = fixture.nativeElement.querySelector('#paragraph-game');
-        const loadingTyping: HTMLImageElement = fixture.nativeElement.querySelector('#loading-typing');
+        const inputGame: HTMLElement = fixture.nativeElement.querySelector('#input-game');
+        const paragraphGame: HTMLElement = fixture.nativeElement.querySelector('#paragraph-game');
+        const loadingTyping: HTMLElement = fixture.nativeElement.querySelector('#loading-typing');
 
         expect(inputGame).toBeTruthy();
         expect(paragraphGame).toBeNull();
@@ -62,7 +62,7 @@ describe('InitialGameComponent', () => {
         component.gameText = 'typing';
         fixture.detectChanges();
 
-        const loadingTyping: HTMLImageElement = fixture.nativeElement.querySelector('#loading-typing');
+        const loadingTyping: HTMLElement = fixture.nativeElement.querySelector('#loading-typing');
 
         expect(loadingTyping).toBeTruthy();
     });
