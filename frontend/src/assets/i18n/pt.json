@@ -10,6 +10,11 @@
     "start": "INÍCIO",
     "back": "voltar",
     "next": "avançar",
+    "camouflage": "camuflagem",
+    "pressurization": "pressurização",
+    "hatch": "escotilha",
+    "activated": "ATIVADO",
+    "disabled": "DESATIVADO",
 
     "title-home": "Estude Angular de uma forma divertida",
     "subtitle-first-home": "Chega de cursos, vídeos e artigos chatos.",

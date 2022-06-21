@@ -1,28 +1,23 @@
 import { Router } from '@angular/router';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { IHelper } from './../../interfaces/helper.interface';
-
-import { option } from '../../mocks/helper-mock';
 
 @Component({
     selector: 'app-helper',
     templateUrl: './helper.component.html',
     styleUrls: ['./helper.component.css']
 })
-export class HelperComponent implements OnInit {
+export class HelperComponent  {
     @Input() options: IHelper = {}
 
     index: number = 0;
+    hiddenText: boolean = false;
 
     constructor(private router: Router) { }
 
-    ngOnInit(): void {
-        this.options = option;
-    }
-
     onNavigate() {
-        return this.router.navigate(['season']);
+        return this.router.navigate([this.options.routeSingleButton]);
     }
 
     onDisabledButtonNext() {
@@ -47,5 +42,13 @@ export class HelperComponent implements OnInit {
         }
 
         return this.index;
+    }
+
+    onHiddenText() {
+        if (this.options.enableHiddenText) {
+            return this.hiddenText = !this.hiddenText;
+        }
+
+        return false;
     }
 }

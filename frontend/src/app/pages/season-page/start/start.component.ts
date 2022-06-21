@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { option } from '../../../shared/mocks/helper-mock';
 
 @Component({
     selector: 'app-start',
     templateUrl: './start.component.html',
     styleUrls: ['./start.component.css']
 })
-export class StartComponent implements OnInit {
-    constructor() { }
+export class StartComponent  {
+    options = option;
 
-    ngOnInit(): void { }
+    constructor() { }
 }

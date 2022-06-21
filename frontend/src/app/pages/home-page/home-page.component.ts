@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,10 +6,8 @@ import { Router } from '@angular/router';
     templateUrl: './home-page.component.html',
     styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent  {
     constructor(private router: Router) { }
-
-    ngOnInit(): void { }
 
     onNavigateSeason(): any {
         return this.router.navigate(['season']);

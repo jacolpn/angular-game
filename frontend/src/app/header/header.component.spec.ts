@@ -44,10 +44,10 @@ describe(HeaderComponent.name, () => {
         component.user.push(users);
         fixture.detectChanges();
 
-        const userLogged: HTMLImageElement = fixture.nativeElement.querySelector('#user-logged');
-        const login: HTMLImageElement = fixture.nativeElement.querySelector('#login');
-        const userName: HTMLImageElement = fixture.nativeElement.querySelector('span');
-        const image: HTMLImageElement = fixture.nativeElement.querySelector('#image_login');
+        const userLogged: HTMLElement = fixture.nativeElement.querySelector('#user-logged');
+        const login: HTMLElement = fixture.nativeElement.querySelector('#login');
+        const userName: HTMLElement = fixture.nativeElement.querySelector('span');
+        const image: HTMLElement = fixture.nativeElement.querySelector('#image_login');
 
         expect(userLogged).toBeTruthy();
         expect(userName.innerText).toBe(users.userName);
@@ -58,8 +58,8 @@ describe(HeaderComponent.name, () => {
     it(`(D) Should display "login" when bound to properties`, () => {
         fixture.detectChanges();
 
-        const userLogged: HTMLImageElement = fixture.nativeElement.querySelector('#user-logged');
-        const login: HTMLImageElement = fixture.nativeElement.querySelector('#login');
+        const userLogged: HTMLElement = fixture.nativeElement.querySelector('#user-logged');
+        const login: HTMLElement = fixture.nativeElement.querySelector('#login');
 
         expect(login).toBeTruthy();
         expect(userLogged).toBeNull();

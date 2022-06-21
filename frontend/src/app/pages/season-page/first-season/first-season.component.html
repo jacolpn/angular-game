@@ -1,0 +1,93 @@
+<section class="wrapper">
+    <div class="w-[95vw]">
+        <div class="container-main-glass">
+            <div class="main-glass"></div>
+        </div>
+
+        <div class="command-room">
+            <div class="container-command-details">
+                <p class="command-details"></p>
+                <p class="command-details ml-5"></p>
+                <p class="command-details ml-1"></p>
+                <p class="command-details ml-3"></p>
+                <p class="command-details ml-6"></p>
+                <p class="command-details ml-4"></p>
+                <p class="command-details ml-2"></p>
+                <p class="command-details ml-5"></p>
+                <p class="command-details ml-1"></p>
+            </div>
+
+            <div>
+                <div class="command-bank-all-head">
+                    <div class="command-bank-ear-left"></div>
+                    <div class="command-bank-head">
+                        <div class="command-head-line sm:mr-1 mr-5"></div>
+                        <div class="command-head-line"></div>
+                    </div>
+                    <div class="command-bank-ear-right"></div>
+                </div>
+                <div class="command-bank">
+                    <div class="command-bank-line sm:mr-0 sm:mt-0 mr-[-80px] mt-5"></div>
+                    <div class="command-bank-line"></div>
+                </div>
+            </div>
+
+            <div class="wrapper-command-button">
+                <div class="container-command-button">
+                    <div
+                        id="button-camouflage"
+                        [class]="camouflage ? 'command-button-active' : 'command-button-inactive'"
+                    >
+                        <p class="command-button-function">{{ 'camouflage' | translate }}</p>
+                        <p class="command-button-status">{{ (camouflage ? 'activated' : 'disabled') | translate }}</p>
+                    </div>
+                    <div
+                        id="button-pressurization"
+                        [class]="pressurization ? 'command-button-active' : 'command-button-inactive'"
+                    >
+                        <p class="command-button-function">{{ 'pressurization' | translate }}</p>
+                        <p class="command-button-status">{{ (pressurization ? 'activated' : 'disabled') | translate }}</p>
+                    </div>
+                    <div
+                        id="button-hatch"
+                        [class]="hatch ? 'command-button-active' : 'command-button-inactive'"
+                    >
+                        <p class="command-button-function">{{ 'hatch' | translate }}</p>
+                        <p class="command-button-status">{{ (hatch ? 'activated' : 'disabled') | translate }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="command-bank-all-head">
+                    <div class="command-bank-ear-left"></div>
+                    <div class="command-bank-head">
+                        <div class="command-head-line sm:mr-1 mr-5"></div>
+                        <div class="command-head-line"></div>
+                    </div>
+                    <div class="command-bank-ear-right"></div>
+                </div>
+                <div class="command-bank">
+                    <div class="command-bank-line sm:mr-0 sm:mt-0 mr-[-80px] mt-5"></div>
+                    <div class="command-bank-line"></div>
+                </div>
+            </div>
+
+            <div class="container-command-details">
+                <p class="command-details"></p>
+                <p class="command-details ml-5"></p>
+                <p class="command-details ml-1"></p>
+                <p class="command-details ml-3"></p>
+                <p class="command-details ml-6"></p>
+                <p class="command-details ml-4"></p>
+                <p class="command-details ml-2"></p>
+                <p class="command-details ml-5"></p>
+                <p class="command-details ml-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-helper">
+        <app-helper [options]="options"></app-helper>
+    </div>
+</section>

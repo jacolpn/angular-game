@@ -10,6 +10,11 @@
     "start": "START",
     "back": "back",
     "next": "advance",
+    "camouflage": "camouflage",
+    "pressurization": "pressurization",
+    "hatch": "hatch",
+    "activated": "ACTIVATED",
+    "disabled": "DISABLED",
 
     "title-home": "Study Angular in a fun way",
     "subtitle-first-home": "No more boring courses, videos and articles.",

@@ -1,17 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-initial-game',
     templateUrl: './initial-game.component.html',
     styleUrls: ['./initial-game.component.css']
 })
-export class InitialGameComponent implements OnInit {
+export class InitialGameComponent  {
     gameText: string = '';
     gameTextResult: string = '{{ interpolation }}';
 
     constructor() { }
-
-    ngOnInit(): void { }
 
     onValidGame(value: string) {
         value.replace(/\s/g, '').toLocaleUpperCase();
