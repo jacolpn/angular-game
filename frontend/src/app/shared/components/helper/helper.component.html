@@ -1,54 +1,58 @@
 <div class="wrapper">
-    <div
-        id="arrow-minimize"
-        class="arrow-minimize"
-        (click)="onHiddenText()"
-        *ngIf="options.enableHiddenText && !hiddenText"
-    >
+    <div>
+        <div
+            id="arrow-minimize"
+            class="arrow-minimize"
+            (click)="onHiddenText()"
+            *ngIf="options.enableHiddenText && !hiddenText"
         >
-    </div>
-
-    <div
-        id="container-text"
-        class="container-text"
-        [ngClass]="options.enableHiddenText ? 'pt-5' : 'pt-2'"
-        *ngIf="!hiddenText"
-    >
-        <div class="box-text">
-            <p id="first-paragraph">
-                {{ options?.paragraph[index]?.firstParagraph | translate }}
-            </p>
-            <p id="second-paragraph" class="mt-4">
-                {{ options?.paragraph[index]?.secondParagraph | translate }}
-            </p>
-            <p id="third-paragraph" class="mt-4">
-                {{ options?.paragraph[index]?.thirdParagraph | translate }}
-            </p>
+            >
         </div>
 
-        <div class="box-button" *ngIf="options?.singleButton!">
-            <button id="button-single" class="button" (click)="onNavigate()">
-                {{ options?.textSingleButton | translate }}
-            </button>
-        </div>
+        <div class="wrapper-text">
+            <div
+                id="container-text"
+                class="container-text"
+                [ngClass]="options.enableHiddenText ? 'pt-5' : 'pt-2'"
+                *ngIf="!hiddenText"
+            >
+                <div class="box-text">
+                    <p id="first-paragraph">
+                        {{ options?.paragraph[index]?.firstParagraph | translate }}
+                    </p>
+                    <p id="second-paragraph" class="mt-4">
+                        {{ options?.paragraph[index]?.secondParagraph | translate }}
+                    </p>
+                    <p id="third-paragraph" class="mt-4">
+                        {{ options?.paragraph[index]?.thirdParagraph | translate }}
+                    </p>
+                </div>
 
-        <div class="container-buttons" *ngIf="!options?.singleButton!">
-            <button
-                id="button-back"
-                class="button-back"
-                (click)="onPreviousInstruction()"
-                [disabled]="onDisabledButtonPrevious()"
-            >
-                {{ 'back' | translate }}
-            </button>
-            <button
-                id="button-next"
-                class="button-next"
-                (click)="onNextInstruction()"
-                [disabled]="onDisabledButtonNext()"
-            >
-                {{ 'next' | translate }}
-            </button>
+                <div class="box-button" *ngIf="options?.singleButton!">
+                    <button id="button-single" class="button" (click)="onNavigate()">
+                        {{ options?.textSingleButton | translate }}
+                    </button>
+                </div>
+
+                <div class="container-buttons" *ngIf="!options?.singleButton!">
+                    <button
+                        id="button-back"
+                        class="button-back"
+                        (click)="onPreviousInstruction()"
+                        [disabled]="onDisabledButtonPrevious()"
+                    >
+                        {{ 'back' | translate }}
+                    </button>
+                    <button
+                        id="button-next"
+                        class="button-next"
+                        (click)="onNextInstruction()"
+                        [disabled]="onDisabledButtonNext()"
+                    >
+                        {{ 'next' | translate }}
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 

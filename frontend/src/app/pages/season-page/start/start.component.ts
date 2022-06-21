@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { option } from '../../../shared/mocks/helper-mock';
 
@@ -7,10 +7,8 @@ import { option } from '../../../shared/mocks/helper-mock';
     templateUrl: './start.component.html',
     styleUrls: ['./start.component.css']
 })
-export class StartComponent implements OnInit {
+export class StartComponent  {
     options = option;
 
     constructor() { }
-
-    ngOnInit(): void { }
 }

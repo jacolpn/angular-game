@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { IHelper } from './../../interfaces/helper.interface';
 
@@ -8,15 +8,13 @@ import { IHelper } from './../../interfaces/helper.interface';
     templateUrl: './helper.component.html',
     styleUrls: ['./helper.component.css']
 })
-export class HelperComponent implements OnInit {
+export class HelperComponent  {
     @Input() options: IHelper = {}
 
     index: number = 0;
     hiddenText: boolean = false;
 
     constructor(private router: Router) { }
-
-    ngOnInit(): void { }
 
     onNavigate() {
         return this.router.navigate([this.options.routeSingleButton]);

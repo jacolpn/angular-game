@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 // import { user } from '../shared/mocks/header-mock';
 
@@ -7,12 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
     @Input() user: Array<any> = [];
 
     constructor() { }
-
-    ngOnInit(): void {
-        // this.user = user;
-    }
 }

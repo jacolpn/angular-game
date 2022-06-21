@@ -4,10 +4,19 @@
 
 @layer components {
     .wrapper {
-        @apply min-h-screen bg-slate-900 text-slate-200 font-mono;
+        @apply
+            min-h-screen
+            bg-slate-900
+            text-slate-200
+            font-mono
+        ;
     }
 
     .router {
-        @apply min-h-[86vh] bg-slate-900;
+        @apply
+            min-h-[86vh]
+            sm:min-h-[81vh]
+            bg-slate-900
+        ;
     }
 }
