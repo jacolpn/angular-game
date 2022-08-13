@@ -19,6 +19,16 @@
         @apply cursor-pointer h-14;
     }
 
+    .title {
+        @apply
+            text-2xl
+            font-semibold
+
+            sm:text-base
+            sm:text-center
+        ;
+    }
+
     .login {
         @apply flex items-center;
     }

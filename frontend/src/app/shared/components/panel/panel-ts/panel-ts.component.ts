@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { UtilService } from 'src/app/shared/services/util.service';
-
 import { option } from './panel-ts-mock';
+
+import { UtilService } from 'src/app/shared/services/util.service';
 
 @Component({
   selector: 'app-panel-ts',
