@@ -7,17 +7,20 @@
         @apply
             flex
             h-[86vh]
-            sm:h-[81vh]
             items-center
             justify-center
+
+            sm:h-auto
+            sm:w-auto
+            sm:p-0
+            sm:m-0
         ;
     }
 
     .container-main-glass {
         @apply
-            w-[95vw]
+            w-[96vw]
             h-[60vh]
-            sm:h-[55vh]
             border-x-2
             border-t-2
             border-slate-400
@@ -27,12 +30,18 @@
             justify-center
             rounded-t-[200px]
             p-4
+
+            sm:mt-2
+            sm:rounded-t-[0px]
+            sm:h-auto
+            sm:w-auto
+            sm:p-1
         ;
     }
 
     .main-glass {
         @apply
-            w-[92vw]
+            w-[94vw]
             h-full
             rounded-b-lg
             rounded-t-[200px]
@@ -41,15 +50,51 @@
             bg-[url('/assets/images/marte.jpg')]
             bg-cover
             flex
-            items-end
+            items-center
+            px-7
+            justify-between
+
+            sm:grid
+            sm:rounded-t-[0px]
+            sm:w-full
+            sm:h-full
+            sm:px-1
+        ;
+    }
+
+    .container-root-css {
+        @apply
+            grid
+            mt-16
+            mr-1
+
+            sm:mt-2
+            sm:mr-0
+        ;
+    }
+
+    .panel-root {
+        @apply
+            ml-8
+
+            sm:ml-0
+        ;
+    }
+
+    .panel-html {
+        @apply
+            mt-24
+            ml-1
+
+            sm:mt-0
+            sm:ml-0
         ;
     }
 
     .command-room {
         @apply
-            w-[95vw]
+            w-[96vw]
             h-[20vh]
-            sm:h-[16vh]
             border-x-2
             border-b-2
             border-slate-400
@@ -58,16 +103,20 @@
             items-end
             justify-center
             rounded-b-[100px]
+
             sm:rounded-b-none
+            sm:w-auto
+            sm:h-auto
         ;
     }
 
     .container-command-details {
         @apply
-            sm:hidden
             h-full
             w-32
             pt-5
+
+            sm:hidden
         ;
     }
 
@@ -119,8 +168,6 @@
 
     .command-bank-head {
         @apply
-            sm:w-12
-            sm:h-8
             w-24
             h-12
             flex
@@ -128,6 +175,9 @@
             justify-center
             bg-stone-900
             rounded-t-[41px]
+
+            sm:w-12
+            sm:h-8
         ;
     }
 
@@ -237,13 +287,14 @@
 
     .container-helper {
         @apply
-            sm:h-1
-            absolute
-            bottom-10
-            right-10
+        absolute
+        bottom-10
+        right-10
+
+        sm:fixed
             sm:bottom-auto
             sm:right-auto
-            sm:pb-10
+            sm:pb-36
         ;
     }
 }

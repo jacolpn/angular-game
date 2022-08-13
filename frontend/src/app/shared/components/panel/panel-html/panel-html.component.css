@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrapper {
+        @apply
+            bg-slate-800
+            rounded-2xl
+            text-xs
+            p-4
+            w-[420px]
+            h-[250px]
+            overflow-auto
+            bg-scroll
+            mb-5
+
+            sm:w-[330px]
+            sm:h-auto
+        ;
+    }
+
+    .container-title {
+        @apply
+            flex
+            items-center
+            justify-between
+            text-[0.5rem]
+            m-0
+            p-0
+            mb-[-0.3rem]
+            mt-[-0.5rem]
+            text-slate-400
+        ;
+    }
+
+    .title {
+        @apply
+            h-3/6
+        ;
+    }
+
+    .component {
+        @apply
+            h-3/6
+        ;
+    }
+
+    .container-code {
+        @apply
+            flex
+            items-center
+        ;
+    }
+
+    .number-code {
+        @apply
+            text-slate-500
+            pr-3
+            w-5
+        ;
+    }
+
+    .one-space {
+        @apply
+            pl-5
+        ;
+    }
+
+    .two-space {
+        @apply
+            pl-10
+        ;
+    }
+
+    .three-space {
+        @apply
+            pl-14
+        ;
+    }
+
+    .input {
+        @apply
+            h-4
+            mb-[0.07rem]
+            sm:text-xs
+            pl-1
+            border-2
+            rounded-md
+            outline-none
+            fill-blue-500
+            text-slate-200
+            bg-purple-800
+            border-purple-700
+            focus-within:border-purple-800
+            focus-within:bg-purple-900
+            disabled:bg-gray-600
+            disabled:border-gray-600
+        ;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="wrapper" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <div *ngFor="let option of options">
+        <div class="container-title" *ngIf="option.component">
+            <p class="title"></p>
+            <p class="component">{{ option.component }}</p>
+        </div>
+
+        <p class="container-root-text">
+            <span class="root-title">root:~$</span>
+            <span>{{ option.procediment }}</span>
+        </p>
+
+        <p class="common-text" *ngFor="let item of option.common">
+            <span>{{ item.paragraph }}</span>
+        </p>
+    </div>
+</div>

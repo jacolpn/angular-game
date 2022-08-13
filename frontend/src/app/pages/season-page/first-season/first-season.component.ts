@@ -1,24 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, Component } from '@angular/core';
 
-import { IHelper } from './../../../shared/interfaces/helper.interface';
+import { UtilService } from 'src/app/shared/services/util.service';
 
 import { firstChallenge } from 'src/app/shared/mocks/first-season/helper-first-mock';
-import { firstCongrats } from 'src/app/shared/mocks/first-season/helper-first-congrats-mock';
 
 @Component({
     selector: 'app-first-season',
     templateUrl: './first-season.component.html',
     styleUrls: ['./first-season.component.css']
 })
-export class FirstSeasonComponent implements OnInit {
+export class FirstSeasonComponent implements AfterContentChecked {
     camouflage: boolean = false
     pressurization: boolean = true;
     hatch: boolean = false;
-    options: IHelper;
+    options: any;
 
-    constructor() { }
+    constructor(public util: UtilService) { }
 
-    ngOnInit(): void {
-        this.options = firstChallenge;
+    ngAfterContentChecked(): void {
+        this.options = firstChallenge[this.util.level - 1];
     }
 }

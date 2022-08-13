@@ -8,7 +8,7 @@ import { IHelper } from './../../interfaces/helper.interface';
     templateUrl: './helper.component.html',
     styleUrls: ['./helper.component.css']
 })
-export class HelperComponent  {
+export class HelperComponent {
     @Input() options: IHelper = {}
 
     index: number = 0;
