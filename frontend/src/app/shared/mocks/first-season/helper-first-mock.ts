@@ -78,7 +78,7 @@ export const firstChallenge: any = [
                 secondParagraph: 'A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos ().'
             },
             {
-                firstParagraph: 'Precisamos alterar o valor da vareavel XXX para “liberada”.',
+                firstParagraph: 'Precisamos alterar o valor da vareavel escotilhaTrancada para “liberada”.',
                 secondParagraph: 'Utilizaremos o two-way data binding para alterar o valor.',
             }
         ]
