@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="container-title">
+        <p class="title"></p>
+        <p class="component">{{ options.component }}</p>
+    </div>
+
+    <p class="container-code" *ngFor="let item of options.common; let i = index" [attr.data-index]="i">
+        <span class="number-code">{{ i + 1 }}</span>
+        <span [class]="item.space ? 'pl-5' : 'pl-0'">{{ item.paragraph }}</span>
+    </p>
+</div>

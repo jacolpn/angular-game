@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="container-title">
+        <p class="title"></p>
+        <p class="component">{{ options.component }}</p>
+    </div>
+
+    <p class="container-code" *ngFor="let item of options.common; let i = index" [attr.data-index]="i">
+        <span class="number-code">{{ i + 1 }}</span>
+        <span class="flex">
+            <span *ngIf="item.init !== ''" [class]="item.class">{{ item.init }}</span>
+
+            <input
+                [class]="item.id === 1 || item.id === 3 ? 'input w-28' : 'input ml-2 w-24'"
+                *ngIf="displayInput(item.id)"
+                (focusout)="conclude($event, item.id)"
+                (keyup.enter)="conclude($event, item.id)"
+                [disabled]="disableInput(item.id)"
+            >
+
+            <span [class]="item.id === 1 || item.id === 3 ? 'text-green-500' : 'text-green-500 ml-2'" *ngIf="displaySpan(item.id) !== ''">
+                {{ displaySpan(item.id) }}
+            </span>
+            <span *ngIf="item.final !== ''">{{ item.final }}</span>
+            <span [class]="item.class" *ngIf="item.init === ''">{{ item.paragraph }}</span>
+        </span>
+    </p>
+</div>

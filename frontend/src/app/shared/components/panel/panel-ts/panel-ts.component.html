@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="container-title">
+        <p class="title"></p>
+        <p class="component">{{ options.component }}</p>
+    </div>
+
+    <p class="container-code" *ngFor="let item of options.common; let i = index" [attr.data-index]="i">
+        <span class="number-code">{{ i + 1 }}</span>
+        <span class="flex">
+            <input
+                class="input"
+                *ngIf="showTextInit('input', item)"
+                (focusout)="conclude($event, item.id)"
+                (keyup.enter)="conclude($event, item.id)"
+            >
+            <span class="pl-5 text-green-500" *ngIf="showTextInit('text', item)">{{ firstLevel }}</span>
+
+            <span [class]="item.class">{{ item.paragraph }}</span>
+
+            <input
+                class="input ml-2"
+                *ngIf="showTextFinal('input', item)"
+                [disabled]="disableInput(item.id)"
+                [placeholder]="placeholderInput(item.id)"
+                (focusout)="conclude($event, item.id)"
+                (keyup.enter)="conclude($event, item.id)"
+            >
+            <span class="ml-1 text-green-500" *ngIf="showTextFinal('text', item)">
+                {{ secondLevel }}<span class="text-slate-200">;</span>
+            </span>
+        </span>
+    </p>
+</div>

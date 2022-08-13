@@ -1,10 +1,12 @@
-import { HelperModule } from './../../../shared/components/helper/helper.module';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FirstSeasonRoutingModule } from './first-season-routing.module';
+
+import { PanelModule } from './../../../shared/components/panel/panel.module';
+import { HelperModule } from './../../../shared/components/helper/helper.module';
 
 import { FirstSeasonComponent } from './first-season.component';
 
@@ -17,7 +19,8 @@ import { FirstSeasonComponent } from './first-season.component';
     FormsModule,
     FirstSeasonRoutingModule,
     TranslateModule,
-    HelperModule
+    HelperModule,
+    PanelModule
   ]
 })
 export class FirstSeasonModule { }

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrapper {
+        @apply
+            bg-slate-800
+            rounded-2xl
+            text-xs
+            p-4
+            w-[288px]
+            h-[132px]
+            overflow-auto
+            bg-scroll
+            mb-1
+        ;
+    }
+
+    .container-title {
+        @apply
+            flex
+            items-center
+            justify-between
+            text-[0.5rem]
+            m-0
+            p-0
+            mb-[-0.3rem]
+            mt-[-0.5rem]
+            text-slate-400
+        ;
+    }
+
+    .title {
+        @apply
+            h-3/6
+        ;
+    }
+
+    .component {
+        @apply
+            h-3/6
+        ;
+    }
+
+    .container-root-text {
+        @apply
+            flex
+            items-center
+        ;
+    }
+
+    .root-title {
+        @apply
+            text-green-500
+            pr-2
+        ;
+    }
+
+    .common-text {
+        @apply
+            grid
+            pl-6
+        ;
+    }
+}
