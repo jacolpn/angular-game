@@ -5,6 +5,15 @@
         </div>
 
         <div class="flex items-center justify-center">
+            <input
+                class="input"
+                *ngIf="displayInput()"
+                (focusout)="conclude($event)"
+                (keyup.enter)="conclude($event)"
+            >
+        </div>
+
+        <div class="flex items-center justify-center" *ngIf="!displayInput()">
             <button (click)="confirm()" class="mt-5 button">{{ displayTextButton() }}</button>
         </div>
     </div>

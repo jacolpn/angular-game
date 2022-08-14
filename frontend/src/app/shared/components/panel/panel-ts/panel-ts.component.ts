@@ -82,7 +82,7 @@ export class PanelTsComponent implements OnInit {
             }
         }
 
-        this.util.updateLevel();
+        this.util.nextLevel();
     }
 
     disableInput(id: any) {

@@ -65,7 +65,7 @@ export class PanelHtmlComponent implements OnInit {
             this.util.congrats = true;
         }
 
-        this.util.updateLevel();
+        this.util.nextLevel();
     }
 
     disableInput(id: any) {

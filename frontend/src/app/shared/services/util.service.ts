@@ -5,13 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class UtilService {
     level: number;
+    lastLevel: boolean;
     congrats: boolean;
 
     constructor() {
         this.level = localStorage.getItem('level') ? Number(localStorage.getItem('level')) : 1;
     }
 
-    updateLevel() {
+    nextLevel() {
         if (localStorage.getItem('first-level-html') && localStorage.getItem('first-level-ts')) {
             localStorage.setItem('level', '2');
 
@@ -39,6 +40,7 @@ export class UtilService {
         if (localStorage.getItem('fifth-level-html')) {
             localStorage.setItem('level', '6');
 
+            this.lastLevel = true;
             this.level = Number(localStorage.getItem('level'));
         }
     }
