@@ -32,29 +32,37 @@ export class PanelHtmlComponent implements OnInit {
     }
 
     conclude(value: any, id: number) {
-        if (id === 1 && value.target.value.trim().toLowerCase() === `{{${localStorage.getItem('first-level-ts')}}}`) {
+        if (id === 1 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === `{{${localStorage.getItem('first-level-ts')}}}`) {
             this.firstLevel = value.target.value;
             localStorage.setItem('first-level-html', `{{ ${localStorage.getItem('first-level-ts')} }}`);
+            this.util.congrats = true;
         }
 
-        if (id === 2 && value.target.value.trim().toLowerCase() === '[class]') {
+        if (id === 2 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '[class]') {
             this.secondLevel = value.target.value;
             localStorage.setItem('second-level-html', value.target.value);
+
+            if (localStorage.getItem('second-level-ts')) {
+                this.util.congrats = true;
+            }
         }
 
-        if (id === 3 && value.target.value.trim().toLowerCase() === '{{50|percent}}') {
+        if (id === 3 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '{{50|percent}}') {
             this.thirdLevel = value.target.value;
             localStorage.setItem('third-level-html', value.target.value);
+            this.util.congrats = true;
         }
 
-        if (id === 4 && value.target.value.trim().toLowerCase() === '[(ngmodel)]') {
+        if (id === 4 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '[(ngmodel)]') {
             this.fourthLevel = value.target.value;
             localStorage.setItem('fourth-level-html', value.target.value);
+            this.util.congrats = true;
         }
 
-        if (id === 5 && value.target.value.trim().toLowerCase() === '(click)') {
+        if (id === 5 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '(click)') {
             this.fifthLevel = value.target.value;
             localStorage.setItem('fifth-level-html', value.target.value);
+            this.util.congrats = true;
         }
 
         this.util.updateLevel();

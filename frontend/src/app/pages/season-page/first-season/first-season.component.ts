@@ -25,6 +25,7 @@ export class FirstSeasonComponent implements AfterContentChecked {
         }
 
         if (this.util.level >= 5) {
+            this.pressurization = false;
             this.hatch = true;
         }
     }

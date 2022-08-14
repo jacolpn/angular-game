@@ -6,6 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FirstSeasonRoutingModule } from './first-season-routing.module';
 
 import { PanelModule } from './../../../shared/components/panel/panel.module';
+import { ModalCongratsModule } from './../../../shared/components/modal-congrats/modal-congrats.module';
 import { HelperModule } from './../../../shared/components/helper/helper.module';
 
 import { FirstSeasonComponent } from './first-season.component';
@@ -20,7 +21,8 @@ import { FirstSeasonComponent } from './first-season.component';
     FirstSeasonRoutingModule,
     TranslateModule,
     HelperModule,
-    PanelModule
+    PanelModule,
+    ModalCongratsModule
   ]
 })
 export class FirstSeasonModule { }

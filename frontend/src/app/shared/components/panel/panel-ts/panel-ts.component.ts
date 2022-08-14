@@ -73,9 +73,13 @@ export class PanelTsComponent implements OnInit {
             localStorage.setItem('first-level-ts', value.target.value);
         }
 
-        if (value.target.value.trim() === 'true' && id === 2) {
+        if (value.target.value.trim().replace(/\s/g, '') === 'true' && id === 2) {
             this.secondLevel = value.target.value;
             localStorage.setItem('second-level-ts', value.target.value);
+
+            if (localStorage.getItem('second-level-html')) {
+                this.util.congrats = true;
+            }
         }
 
         this.util.updateLevel();

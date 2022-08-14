@@ -1,3 +1,5 @@
+<app-modal-congrats class="absolute top-0 z-50" *ngIf="util.congrats"></app-modal-congrats>
+
 <section class="wrapper">
     <div class="w-[95vw]">
         <div class="container-main-glass">
@@ -49,13 +51,13 @@
                         <p class="command-button-function">{{ 'camouflage' | translate }}</p>
                         <p class="command-button-status">{{ (camouflage ? 'activated' : 'disabled') | translate }}</p>
                     </div>
-                    <!-- <div
+                    <div
                         id="button-pressurization"
                         [class]="pressurization ? 'command-button-active' : 'command-button-inactive'"
                     >
                         <p class="command-button-function">{{ 'pressurization' | translate }}</p>
                         <p class="command-button-status">{{ (pressurization ? 'activated' : 'disabled') | translate }}</p>
-                    </div> -->
+                    </div>
                     <div
                         id="button-hatch"
                         [class]="hatch ? 'command-button-active' : 'command-button-inactive'"
@@ -95,7 +97,7 @@
         </div>
     </div>
 
-    <div class="container-helper z-50">
+    <div class="container-helper z-40">
         <app-helper [options]="options"></app-helper>
     </div>
 </section>

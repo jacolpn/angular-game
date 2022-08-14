@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply
+            px-4
+            w-56
+            h-8
+            rounded-t-md
+            rounded-b-3xl
+            bg-gradient-to-r from-purple-600 to-pink-600
+            hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-700
+        ;
+    }
+}
