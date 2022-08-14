@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UtilService {
     level: number;
+    congrats: boolean;
 
     constructor() {
         this.level = localStorage.getItem('level') ? Number(localStorage.getItem('level')) : 1;
