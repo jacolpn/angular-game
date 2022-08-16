@@ -1,12 +1,13 @@
 export interface IHelper {
     singleButton?: boolean,
-    enableHiddenText?: boolean,
-    routeSingleButton?: string,
+    iconHiddenText?: boolean,
+    visible: boolean,
     textSingleButton?: string,
+    routeSingleButton?: string,
     paragraph?: Array<IParagraph>
 }
 
-interface IParagraph {
+export interface IParagraph {
     firstParagraph?: string,
     secondParagraph?: string,
     thirdParagraph?: string

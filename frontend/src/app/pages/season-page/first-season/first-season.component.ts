@@ -1,30 +1,37 @@
-import { AfterContentChecked, Component } from '@angular/core';
+import { AfterContentChecked, Component, OnInit } from '@angular/core';
 
-import { firstChallenge } from 'src/app/shared/mocks/first-season/helper-first-mock';
+import { helperText, paragraph } from 'src/app/shared/mocks/first-season/helper-text-mock';
 
-import { UtilService } from 'src/app/shared/services/util.service';
+import { IHelper } from './../../../shared/interfaces/helper.interface';
+
+import { FirstSeasonService } from 'src/app/shared/services/first-season.service';
 
 @Component({
     selector: 'app-first-season',
     templateUrl: './first-season.component.html',
     styleUrls: ['./first-season.component.css']
 })
-export class FirstSeasonComponent implements AfterContentChecked {
+export class FirstSeasonComponent implements OnInit, AfterContentChecked {
     camouflage: boolean = false
     pressurization: boolean = true;
     hatch: boolean = false;
-    options: any;
+    options: IHelper;
 
-    constructor(public util: UtilService) { }
+    constructor(public firstSeason: FirstSeasonService) { }
+
+    ngOnInit(): void {
+        this.firstSeason.startLevel();
+        this.options = helperText;
+    }
 
     ngAfterContentChecked(): void {
-        this.options = firstChallenge[this.util.level - 1];
+        this.options.paragraph = paragraph[this.firstSeason.level - 1];
 
-        if (this.util.level >= 3) {
+        if (this.firstSeason.level >= 3) {
             this.camouflage = true;
         }
 
-        if (this.util.level >= 5) {
+        if (this.firstSeason.level >= 5) {
             this.pressurization = false;
             this.hatch = true;
         }
