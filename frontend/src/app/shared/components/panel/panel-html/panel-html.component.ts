@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { UtilService } from 'src/app/shared/services/util.service';
+import { FirstSeasonService } from 'src/app/shared/services/first-season.service';
 
 import { option } from './panel-html-mock';
 
@@ -19,10 +19,10 @@ export class PanelHtmlComponent implements OnInit {
     fourthLevel: string;
     fifthLevel: string;
 
-    constructor(public util: UtilService) { }
+    constructor(public firstSeason: FirstSeasonService) { }
 
     ngOnInit(): void {
-        this.level = this.util.level;
+        this.level = this.firstSeason.level;
         this.options = option;
         this.firstLevel = localStorage.getItem('first-level-html') ? localStorage.getItem('first-level-html') : '';
         this.secondLevel = localStorage.getItem('second-level-html') ? localStorage.getItem('second-level-html') : '';
@@ -35,7 +35,7 @@ export class PanelHtmlComponent implements OnInit {
         if (id === 1 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === `{{${localStorage.getItem('first-level-ts')}}}`) {
             this.firstLevel = value.target.value;
             localStorage.setItem('first-level-html', `{{ ${localStorage.getItem('first-level-ts')} }}`);
-            this.util.congrats = true;
+            this.firstSeason.congrats = true;
         }
 
         if (id === 2 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '[class]') {
@@ -43,49 +43,49 @@ export class PanelHtmlComponent implements OnInit {
             localStorage.setItem('second-level-html', value.target.value);
 
             if (localStorage.getItem('second-level-ts')) {
-                this.util.congrats = true;
+                this.firstSeason.congrats = true;
             }
         }
 
         if (id === 3 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '{{50|percent}}') {
             this.thirdLevel = value.target.value;
             localStorage.setItem('third-level-html', value.target.value);
-            this.util.congrats = true;
+            this.firstSeason.congrats = true;
         }
 
         if (id === 4 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '[(ngmodel)]') {
             this.fourthLevel = value.target.value;
             localStorage.setItem('fourth-level-html', value.target.value);
-            this.util.congrats = true;
+            this.firstSeason.congrats = true;
         }
 
         if (id === 5 && value.target.value.trim().toLowerCase().replace(/\s/g, '') === '(click)') {
             this.fifthLevel = value.target.value;
             localStorage.setItem('fifth-level-html', value.target.value);
-            this.util.congrats = true;
+            this.firstSeason.congrats = true;
         }
 
-        this.util.nextLevel();
+        this.firstSeason.nextLevel();
     }
 
     disableInput(id: any) {
-        if (this.util.level === 1 && id === 1) {
+        if (this.firstSeason.level === 1 && id === 1) {
             return false;
         }
 
-        if (this.util.level === 2 && id === 2) {
+        if (this.firstSeason.level === 2 && id === 2) {
             return false;
         }
 
-        if (this.util.level === 3 && id === 3) {
+        if (this.firstSeason.level === 3 && id === 3) {
             return false;
         }
 
-        if (this.util.level === 4 && id === 4) {
+        if (this.firstSeason.level === 4 && id === 4) {
             return false;
         }
 
-        if (this.util.level === 5 && id === 5) {
+        if (this.firstSeason.level === 5 && id === 5) {
             return false;
         }
 

@@ -9,10 +9,9 @@ import { IHelper } from './../../interfaces/helper.interface';
     styleUrls: ['./helper.component.css']
 })
 export class HelperComponent implements OnChanges {
-    @Input() options: IHelper = {}
+    @Input() options: IHelper;
 
     index: number = 0;
-    hiddenText: boolean = false;
 
     constructor(private router: Router) { }
 
@@ -24,33 +23,29 @@ export class HelperComponent implements OnChanges {
         return this.router.navigate([this.options.routeSingleButton]);
     }
 
-    onDisabledButtonNext() {
-        return this.index === (this.options?.paragraph?.length - 1)
+    disabledButton(type?: string) {
+        if (type === 'previous') {
+            return this.index === 0;
+        }
+
+        return this.index === (this.options?.paragraph?.length - 1);
     }
 
-    onNextInstruction() {
-        if (this.index < (this.options?.paragraph?.length - 1)) {
+    changeInstruction(type: string) {
+        if (type === 'previous' && this.index > 0) {
+            return this.index--;
+        }
+
+        if (type == 'next' && this.index < (this.options?.paragraph?.length - 1)) {
             return this.index++;
         }
 
         return this.index;
     }
 
-    onDisabledButtonPrevious() {
-        return this.index === 0;
-    }
-
-    onPreviousInstruction() {
-        if (this.index > 0) {
-            return this.index--;
-        }
-
-        return this.index;
-    }
-
-    onHiddenText() {
-        if (this.options.enableHiddenText) {
-            return this.hiddenText = !this.hiddenText;
+    hiddenText() {
+        if (this.options.iconHiddenText) {
+            return this.options.visible = !this.options.visible;
         }
 
         return false;

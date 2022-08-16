@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { option } from './panel-ts-mock';
 
-import { UtilService } from 'src/app/shared/services/util.service';
+import { FirstSeasonService } from 'src/app/shared/services/first-season.service';
 
 @Component({
   selector: 'app-panel-ts',
@@ -16,10 +16,10 @@ export class PanelTsComponent implements OnInit {
     firstLevel: string;
     secondLevel: string;
 
-    constructor(public util: UtilService) { }
+    constructor(public firstSeason: FirstSeasonService) { }
 
     ngOnInit(): void {
-        this.level = this.util.level;
+        this.level = this.firstSeason.level;
         this.options = option;
         this.firstLevel = localStorage.getItem('first-level-ts') ? localStorage.getItem('first-level-ts') : '';
         this.secondLevel = localStorage.getItem('second-level-ts') ? localStorage.getItem('second-level-ts') : '';
@@ -78,19 +78,19 @@ export class PanelTsComponent implements OnInit {
             localStorage.setItem('second-level-ts', value.target.value);
 
             if (localStorage.getItem('second-level-html')) {
-                this.util.congrats = true;
+                this.firstSeason.congrats = true;
             }
         }
 
-        this.util.nextLevel();
+        this.firstSeason.nextLevel();
     }
 
     disableInput(id: any) {
-        if (this.util.level === 1 && id === 1) {
+        if (this.firstSeason.level === 1 && id === 1) {
             return false;
         }
 
-        if (this.util.level === 2 && id === 2) {
+        if (this.firstSeason.level === 2 && id === 2) {
             return false;
         }
 
@@ -98,7 +98,7 @@ export class PanelTsComponent implements OnInit {
     }
 
     placeholderInput(id: any) {
-        if (this.util.level <= 1 || !this.util.level) {
+        if (this.firstSeason.level <= 1 || !this.firstSeason.level) {
             return 'false';
         }
 

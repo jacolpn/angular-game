@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import { option } from '../../../shared/mocks/helper-mock';
+import { helperStart } from '../../../shared/mocks/first-season/helper-start-mock';
+
+import { IHelper } from './../../../shared/interfaces/helper.interface';
 
 @Component({
     selector: 'app-start',
@@ -8,7 +10,7 @@ import { option } from '../../../shared/mocks/helper-mock';
     styleUrls: ['./start.component.css']
 })
 export class StartComponent  {
-    options = option;
+    options: IHelper = helperStart;
 
     constructor() { }
 }

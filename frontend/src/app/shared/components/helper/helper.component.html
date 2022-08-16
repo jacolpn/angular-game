@@ -3,8 +3,8 @@
         <div
             id="arrow-minimize"
             class="arrow-minimize"
-            (click)="onHiddenText()"
-            *ngIf="options.enableHiddenText && !hiddenText"
+            *ngIf="options.iconHiddenText && options.visible"
+            (click)="hiddenText()"
         >
             >
         </div>
@@ -13,8 +13,8 @@
             <div
                 id="container-text"
                 class="container-text"
-                [ngClass]="options.enableHiddenText ? 'pt-5' : 'pt-2'"
-                *ngIf="!hiddenText"
+                *ngIf="options.visible"
+                [ngClass]="options.iconHiddenText ? 'pt-5' : 'pt-2'"
             >
                 <div class="box-text">
                     <p id="first-paragraph">
@@ -38,16 +38,16 @@
                     <button
                         id="button-back"
                         class="button-back"
-                        (click)="onPreviousInstruction()"
-                        [disabled]="onDisabledButtonPrevious()"
+                        [disabled]="disabledButton('previous')"
+                        (click)="changeInstruction('previous')"
                     >
                         {{ 'back' | translate }}
                     </button>
                     <button
                         id="button-next"
                         class="button-next"
-                        (click)="onNextInstruction()"
-                        [disabled]="onDisabledButtonNext()"
+                        [disabled]="disabledButton()"
+                        (click)="changeInstruction('next')"
                     >
                         {{ 'next' | translate }}
                     </button>
@@ -56,9 +56,9 @@
         </div>
     </div>
 
-    <div class="container-robot" (click)="onHiddenText()">
-        <span id="first-balon" class="first-balon" *ngIf="!hiddenText"></span>
-        <span id="second-balon" class="second-balon" *ngIf="!hiddenText"></span>
+    <div class="container-robot" (click)="hiddenText()">
+        <span id="first-balon" class="first-balon" *ngIf="options.visible"></span>
+        <span id="second-balon" class="second-balon" *ngIf="options.visible"></span>
         <span class="robot">
             <span class="ping-robot"></span>
         </span>

@@ -1,6 +1,11 @@
-import { IHelper } from '../../interfaces/helper.interface';
+import { IHelper } from './../../interfaces/helper.interface';
 
-export const firstCongrats: IHelper = {
+export const helperCongrats: IHelper = {
+    singleButton: false,
+    iconHiddenText: true,
+    visible: true,
+    textSingleButton: 'iniciar aventura',
+    routeSingleButton: 'season/first',
     paragraph: [
         {
             firstParagraph: 'Parabéns, conseguimos dar início do processo de aterrissagem e aprendemos a utilizar a “Interpolação” do angular.',
@@ -20,4 +25,4 @@ export const firstCongrats: IHelper = {
             secondParagraph: 'Não paramos por ai, na próxima temporada iremos aprender conceitos avançados de Angular e aproveitaremos para matar outros Bilu’s.',
         }
     ]
-}
+};

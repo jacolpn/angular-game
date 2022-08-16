@@ -1,18 +1,18 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { RouterModule } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { option } from '../../mocks/helper-mock';
+import { TranslateModule } from '@ngx-translate/core';
+
 import { loader } from './../../utils/http-loader-factory';
+
+import { helperCongrats } from './../../mocks/first-season/helper-congrats-mock';
 
 import { routes } from 'src/app/app-routing.module';
 
 import { HelperComponent } from './helper.component';
-
-let options: any = option;
 
 describe('HelperComponent', () => {
     let component: HelperComponent;
@@ -34,6 +34,8 @@ describe('HelperComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(HelperComponent);
         component = fixture.componentInstance;
+        component.options = helperCongrats;
+        component.options.visible = true;
     });
 
     it('Should create component', () => {
@@ -41,8 +43,7 @@ describe('HelperComponent', () => {
     });
 
     it(`(D) Should display "Single button" when bound to singleButton propertie is true`, () => {
-        options.singleButton = true;
-        component.options = options;
+        component.options.singleButton = true;
         fixture.detectChanges();
 
         const singleButton: HTMLElement = fixture.nativeElement.querySelector('#button-single');
@@ -55,8 +56,7 @@ describe('HelperComponent', () => {
     });
 
     it(`(D) Should display "Next" and "Back" button when bound to singleButton propertie is false`, () => {
-        options.singleButton = false;
-        component.options = options;
+        component.options.singleButton = false;
         fixture.detectChanges();
 
         const singleButton: HTMLElement = fixture.nativeElement.querySelector('#button-single');
@@ -69,31 +69,23 @@ describe('HelperComponent', () => {
     });
 
     it(`(D) Should change paragraph when clicked in next button`, () => {
-        options.singleButton = false;
-        component.options = options;
+        component.options.singleButton = false;
         fixture.detectChanges();
 
         const nextButton: HTMLElement = fixture.nativeElement.querySelector('#button-next');
         const firstParagraph: HTMLElement = fixture.nativeElement.querySelector('#first-paragraph');
-        const secondParagraph: HTMLElement = fixture.nativeElement.querySelector('#second-paragraph');
-        const thirdParagraph: HTMLElement = fixture.nativeElement.querySelector('#third-paragraph');
 
         expect(component.index).toBe(0);
-        expect(firstParagraph.innerText).toBe(options.paragraph[0].firstParagraph);
-        expect(secondParagraph.innerText).toBe(options.paragraph[0].secondParagraph);
-        expect(thirdParagraph.innerText).toBe(options.paragraph[0].thirdParagraph);
+        expect(firstParagraph.innerText).toBe(helperCongrats.paragraph[0].firstParagraph);
 
         nextButton.click();
         fixture.detectChanges();
 
         expect(component.index).toBe(1);
-        expect(firstParagraph.innerText).toBe(options.paragraph[1].firstParagraph);
-        expect(secondParagraph.innerText).toBe(options.paragraph[1].secondParagraph);
-        expect(thirdParagraph.innerText).toBe(options.paragraph[1].thirdParagraph);
+        expect(firstParagraph.innerText).toBe(helperCongrats.paragraph[1].firstParagraph);
     });
 
     it(`onNavigate: Should move to 'first season'`, () => {
-        component.options = options;
         spyOn(component['router'], 'navigate');
 
         component.onNavigate();
@@ -101,78 +93,71 @@ describe('HelperComponent', () => {
         expect(component['router'].navigate).toHaveBeenCalledWith(['season/first']);
     });
 
-    it('onDisabledButtonPrevious: Should return true and false', () => {
+    it('disabledButton(previous): Should return true and false', () => {
         component.index = 0;
-        expect(component.onDisabledButtonPrevious()).toBeTrue();
+        expect(component.disabledButton('previous')).toBeTrue();
 
         component.index = 1;
-        expect(component.onDisabledButtonPrevious()).toBeFalse();
+        expect(component.disabledButton('previous')).toBeFalse();
     });
 
-    it('onDisabledButtonNext: Should return true and false', () => {
-        component.options = options;
-        fixture.detectChanges();
+    it('disabledButton(next): Should return true and false', () => {
 
-        component.index = 1;
-        expect(component.onDisabledButtonNext()).toBeTrue();
+        component.index = 4;
+        expect(component.disabledButton()).toBeTrue();
 
-        component.index = 2;
-        expect(component.onDisabledButtonNext()).toBeFalse();
+        component.index = 5;
+        expect(component.disabledButton()).toBeFalse();
     });
 
-    it('onPreviousInstruction: Should return correct values', () => {
+    it('changeInstruction(previous): Should return correct values', () => {
         component.index = 2;
-        component.onPreviousInstruction();
+        component.changeInstruction('previous');
 
         expect(component.index).toBe(1);
     });
 
-    it(`onPreviousInstruction: Should'n decrement to index when index is zero(0)`, () => {
+    it(`changeInstruction(previous): Should'n decrement to index when index is zero(0)`, () => {
         component.index = 0;
-        component.onPreviousInstruction();
+        component.changeInstruction('previous');
 
         expect(component.index).toBe(0);
     });
 
-    it('onNextInstruction: Should return correct values', () => {
-        component.options = options;
+    it('changeInstruction(next): Should return correct values', () => {
         fixture.detectChanges();
 
         component.index = 0;
-        component.onNextInstruction();
+        component.changeInstruction('next');
 
         expect(component.index).toBe(1);
     });
 
-    it(`onNextInstruction: Should'n append to index when index is the size of paragraph array`, () => {
-        component.options = options;
+    it(`changeInstruction(next): Should'n append to index when index is the size of paragraph array`, () => {
         fixture.detectChanges();
 
-        component.index = 2;
-        component.onNextInstruction();
+        component.index = 4;
+        component.changeInstruction('next');
 
-        expect(component.index).toBe(2);
+        expect(component.index).toBe(4);
     });
 
-    it(`(D) Should display class 'pt-5' when 'enableHiddenText' is true and display class 'pt-2' when 'enableHiddenText' is false`, () => {
-        options.enableHiddenText = true;
-        component.options = options;
+    it(`(D) Should display class 'pt-5' when 'iconHiddenText' is true and display class 'pt-2' when 'iconHiddenText' is false`, () => {
+        component.options.iconHiddenText = true;
         fixture.detectChanges();
 
         const containerText: HTMLElement = fixture.nativeElement.querySelector('#container-text');
 
         expect(containerText.getAttribute('class')).toContain('pt-5');
 
-        options.enableHiddenText = false;
-        component.options = options;
+        component.options.iconHiddenText = false;
         fixture.detectChanges();
 
         expect(containerText.getAttribute('class')).toContain('pt-2');
     });
 
     it(`(D) Should display 'container, arrow, balons' when 'hiddenText' is false`, () => {
-        options.enableHiddenText = true;
-        component.options = options;
+        component.options.iconHiddenText = true;
         fixture.detectChanges();
 
         const containerText: HTMLElement = fixture.nativeElement.querySelector('#container-text');
@@ -187,9 +172,8 @@ describe('HelperComponent', () => {
     });
 
     it(`(D) Shouldn't display 'container, arrow, balons' when 'hiddenText' is true`, () => {
-        options.enableHiddenText = true;
-        component.hiddenText = true;
-        component.options = options;
+        component.options.iconHiddenText = true;
+        component.options.visible = false;
         fixture.detectChanges();
 
         const containerText: HTMLElement = fixture.nativeElement.querySelector('#container-text');
@@ -203,24 +187,20 @@ describe('HelperComponent', () => {
         expect(secondBalon).toBeNull();
     });
 
-    it(`(D) Shouldn't display 'arrow-minimize' when 'enableHiddenText' is false`, () => {
-        options.enableHiddenText = false;
-        component.options = options;
+    it(`(D) Shouldn't display 'arrow-minimize' when 'iconHiddenText' is false`, () => {
+        component.options.iconHiddenText = false;
         fixture.detectChanges();
 
         const arrowMinimize: HTMLElement = fixture.nativeElement.querySelector('#arrow-minimize');
         expect(arrowMinimize).toBeNull();
     });
 
-    it(`onHiddenText: Should return true when 'enableHiddenText' is false and return true when 'enableHiddenText' is true`, () => {
-        options.enableHiddenText = false;
-        component.options = options;
+    it(`hiddenText: Should return true when 'iconHiddenText' is false and return true when 'iconHiddenText' is true`, () => {
+        component.options.iconHiddenText = false;
+        expect(component.hiddenText()).toBeFalse();
 
-        expect(component.onHiddenText()).toBeFalse();
-
-        options.enableHiddenText = true;
-        component.options = options;
-
-        expect(component.onHiddenText()).toBeTruthy();
+        component.options.visible = false;
+        component.options.iconHiddenText = true;
+        expect(component.hiddenText()).toBeTruthy();
     });
 });
