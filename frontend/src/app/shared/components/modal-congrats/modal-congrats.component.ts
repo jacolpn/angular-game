@@ -1,17 +1,25 @@
 import { Router } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { FirstSeasonService } from 'src/app/shared/services/first-season.service';
+import { helperCongrats } from '../../mocks/first-season/helper-congrats-mock';
+import { IHelper } from './../../../shared/interfaces/helper.interface';
 
 @Component({
     selector: 'app-modal-congrats',
     templateUrl: './modal-congrats.component.html',
     styleUrls: ['./modal-congrats.component.css']
 })
-export class ModalCongratsComponent {
+export class ModalCongratsComponent implements OnInit {
     activeInput: boolean = true;
+    options: IHelper;
 
     constructor(public firstSeason: FirstSeasonService, public router: Router) { }
+
+    ngOnInit(): void {
+        this.options = helperCongrats;
+        console.log(this.options);
+    }
 
     confirm() {
         if (this.firstSeason.level < 6) {

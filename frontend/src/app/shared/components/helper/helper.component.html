@@ -28,14 +28,14 @@
                     </p>
                 </div>
 
-                <div class="box-button" *ngIf="options?.singleButton!">
+                <div class="box-button" *ngIf="options?.singleButton">
                     <button id="button-single" class="button" (click)="onNavigate()">
                         {{ options?.textSingleButton | translate }}
                     </button>
                 </div>
 
-                <div class="container-buttons" *ngIf="!options?.singleButton!">
-                    <button
+                <div class="container-buttons" *ngIf="!options?.singleButton">
+                    <button *ngIf="!disabledButton('previous')"
                         id="button-back"
                         class="button-back"
                         [disabled]="disabledButton('previous')"
@@ -43,7 +43,7 @@
                     >
                         {{ 'back' | translate }}
                     </button>
-                    <button
+                    <button *ngIf="!disabledButton(); else closeButton"
                         id="button-next"
                         class="button-next"
                         [disabled]="disabledButton()"
@@ -51,6 +51,15 @@
                     >
                         {{ 'next' | translate }}
                     </button>
+                    <ng-template #closeButton>
+                        <button
+                        id="button-close"
+                        class="button-next"
+                        (click)="hiddenText()"
+                    >
+                        {{ 'close' | translate }}
+                    </button>
+                    </ng-template>
                 </div>
             </div>
         </div>

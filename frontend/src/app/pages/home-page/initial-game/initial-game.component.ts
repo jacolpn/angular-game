@@ -17,10 +17,8 @@ export class InitialGameComponent  {
         switch(value) {
             case 'interpolation':
                 return true;
-                break;
             case '{{interpolation}}':
                 return true;
-                break;
             default:
                 return false;
         }

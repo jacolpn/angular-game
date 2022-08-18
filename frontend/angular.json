@@ -113,6 +113,7 @@
   },
   "defaultProject": "angular-game",
   "cli": {
+    "analytics": "49c6946a-df5d-41ca-a039-03709b369c6c",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }
