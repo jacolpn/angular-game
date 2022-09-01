@@ -1,4 +1,9 @@
-<div class="wrapper" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+<div
+    id="painel-root"
+    #scrollMe
+    [class]="setBorder()"
+    [scrollTop]="scrollMe.scrollHeight"
+>   
     <div *ngFor="let option of options">
         <div class="container-title" *ngIf="option.component">
             <p class="title"></p>

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 4px;
+    overflow-y: scroll;
+    background: grey;
+    box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply
+        bg-gradient-to-r from-purple-600 to-pink-600
+        hover:bg-gradient-to-r hover:from-purple-700 hover:to-pink-700
+    ;    
+    /* border-radius: 10px;*/
+}
