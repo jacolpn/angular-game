@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 
 import { FirstSeasonService } from '../../../services/first-season.service';
 
@@ -20,9 +20,21 @@ export class PanelRootComponent implements OnInit {
         this.fillText();
     }
 
+    ngOnChanges(changes: SimpleChanges): void {
+        this.fillText();
+    }
+
     fillText() {
         for (let i = 0; i <= this.firstSeason.level - 1; i++) {
             this.options.push(option[i]);
         }
+    }
+
+    setBorder() {
+        if (this.firstSeason.level <= 1) {
+            return 'wrapper'
+        }
+
+        return 'wrapper-2'
     }
 }
