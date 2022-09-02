@@ -13,9 +13,9 @@ export const paragraph: Array<Array<any>> = [
     [
         {
             firstParagraph: 'Chegamos em marte e precisamos iniciar os procedimentos para aterrisagem. O sistema da nave funciona em Angular.',
-            secondParagraph: 'Nave foi atingida por meteoro e deu problema. Precisamos ajustar a nave utilizando angular.'
+            secondParagraph: 'O nosso desafio inicial é conseguir realizar a aterrissagem garantindo a integridade da nave - e se tudo der certo, dos tripulantes também - .'
         },
-        {
+        {   
             firstParagraph: 'A interpolação de texto permite incorporar valores de string dinâmicos em seus modelos HTML. Use a interpolação para alterar dinamicamente o que aparece em uma visualização do aplicativo.',
             secondParagraph: 'A interpolação é utilizada por meio de chaves “{{ }}” em uma variável.'
         },
@@ -34,13 +34,13 @@ export const paragraph: Array<Array<any>> = [
             firstParagraph: 'Precisamos clamufar a nave para evitar ser percebido por outras naves.',
         },
         {
-            firstParagraph: 'Use o property binding para fazer coisas como alterar dinamicamente propriedades do HTML inserindo [colchetes] (EX: <img [src]=”variavel”>).',
+            firstParagraph: 'Use o property binding para fazer coisas como alterar dinamicamente propriedades do HTML inserindo [colchetes].',
         },
         {
             firstParagraph: 'Para isso, começamos alterando o valor da variável navelVisivel para “false”.',
         },
         {
-            firstParagraph: 'Precisamos inserir o property bind na propriedade "class" do html, para conseguirmos ativar o modo camuflagem.',
+            firstParagraph: 'Precisamos inserir o property binding na propriedade "class" do html, para conseguirmos ativar o modo camuflagem. (EX: <img [src]=”variavel”>)',
             secondParagraph: 'OBS: utilizamos o *ternario para alterar dinâmicamente a cor da nave.',
             link: 'https://www.alura.com.br/artigos/o-que-e-o-operador-ternario?gclid=CjwKCAjwsMGYBhAEEiwAGUXJafkUkdRqeIo2CQ_h4srGH4ZqaF72jcimfNZgbfZTB-bchOZzTAbgtxoCbyYQAvD_BwE'
         }
@@ -68,7 +68,7 @@ export const paragraph: Array<Array<any>> = [
             thirdParagraph: 'Use a diretiva NgModel para mostrar a propriedade e atualizá-la quando o usuário realizar alterações. Ex: [(NgModel)]'
         },
         {
-            firstParagraph: 'Precisamos alterar o valor da variavel escotilhaTrancada para “liberada”.',
+            firstParagraph: 'Precisamos alterar o valor da variável escotilhaTrancada para “liberada”.',
             secondParagraph: 'Utilizaremos o two-way data binding para alterar o valor.',
         }
     ],

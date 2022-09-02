@@ -52,7 +52,7 @@ export class ModalCongratsComponent implements OnInit {
                 return 'Parabéns, você conseguiu despressurizar a porta e aprender Two-way data binding.';
             case 6:
                 if (this.firstSeason.lastLevel) {
-                    return 'Parabéns, chegamos em Marte em segurança! Não paramos por ai, na próxima temporada iremos aprender conceitos avançados de Angular e aproveitaremos para matar outros Bilu’s.';
+                    return 'Parabéns, chegamos em Marte em segurança! Não paramos por ai, na próxima temporada iremos aprender conceitos avançados de Angular e aproveitaremos para explorar Marte.';
                 }
 
                 return 'Bem vindo à Marte!'
