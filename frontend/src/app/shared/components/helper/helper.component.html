@@ -26,6 +26,14 @@
                     <p id="third-paragraph" class="mt-4">
                         {{ options?.paragraph[index]?.thirdParagraph | translate }}
                     </p>
+                    <a
+                        [href]="options?.paragraph[index]?.link"
+                        *ngIf="options?.paragraph[index]?.link"
+                        class="mt-4 link"
+                        target="_blank"
+                    >
+                        {{ 'what-is-ternary' | translate }}
+                    </a>
                 </div>
 
                 <div class="box-button" *ngIf="options?.singleButton">

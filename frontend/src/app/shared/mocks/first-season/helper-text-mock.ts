@@ -9,7 +9,7 @@ export const helperText: IHelper = {
     paragraph: []
 };
 
-export const paragraph: Array<Array<IParagraph>> = [
+export const paragraph: Array<Array<any>> = [
     [
         {
             firstParagraph: 'Chegamos em marte e precisamos iniciar os procedimentos para aterrisagem. O sistema da nave funciona em Angular.',
@@ -40,8 +40,9 @@ export const paragraph: Array<Array<IParagraph>> = [
             firstParagraph: 'Para isso, começamos alterando o valor da variável navelVisivel para “false”.',
         },
         {
-            firstParagraph: 'Precisamos inserir o property bind para conseguirmos ativar o modo camuflagem.',
-            secondParagraph: 'OBS: utilizamos o *ternario para alterar dinâmicamente a cor da nave.(lembrar de inserir a documentação ao clicar no ternario).',
+            firstParagraph: 'Precisamos inserir o property bind na propriedade "class" do html, para conseguirmos ativar o modo camuflagem.',
+            secondParagraph: 'OBS: utilizamos o *ternario para alterar dinâmicamente a cor da nave.',
+            link: 'https://www.alura.com.br/artigos/o-que-e-o-operador-ternario?gclid=CjwKCAjwsMGYBhAEEiwAGUXJafkUkdRqeIo2CQ_h4srGH4ZqaF72jcimfNZgbfZTB-bchOZzTAbgtxoCbyYQAvD_BwE'
         }
     ],
     [
@@ -63,10 +64,11 @@ export const paragraph: Array<Array<IParagraph>> = [
         },
         {
             firstParagraph: 'O two-way data binding é a forma no qual permite a troca de informações entre o template e seu controller, nesse caso vamos utilizar para alterar a propriedade da porta.',
-            secondParagraph: 'A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos ().'
+            secondParagraph: 'A sintaxe [()] combina os colchetes de ligação à propriedade, [], com os parênteses da ligação de eventos ().',
+            thirdParagraph: 'Use a diretiva NgModel para mostrar a propriedade e atualizá-la quando o usuário realizar alterações. Ex: [(NgModel)]'
         },
         {
-            firstParagraph: 'Precisamos alterar o valor da vareavel escotilhaTrancada para “liberada”.',
+            firstParagraph: 'Precisamos alterar o valor da variavel escotilhaTrancada para “liberada”.',
             secondParagraph: 'Utilizaremos o two-way data binding para alterar o valor.',
         }
     ],

@@ -9,7 +9,7 @@ import { IHelper } from './../../interfaces/helper.interface';
     styleUrls: ['./helper.component.css']
 })
 export class HelperComponent implements OnChanges {
-    @Input() options: IHelper;
+    @Input() options: any;
 
     index: number = 0;
 

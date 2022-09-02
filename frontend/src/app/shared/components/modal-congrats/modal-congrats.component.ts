@@ -18,7 +18,6 @@ export class ModalCongratsComponent implements OnInit {
 
     ngOnInit(): void {
         this.options = helperCongrats;
-        console.log(this.options);
     }
 
     confirm() {

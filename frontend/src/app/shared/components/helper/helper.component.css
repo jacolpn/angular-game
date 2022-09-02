@@ -193,4 +193,12 @@
             disabled:bg-gradient-to-r disabled:from-slate-600 disabled:to-slate-700
         ;
     }
+
+    .link {
+        @apply
+            text-violet-500
+            hover:text-violet-400
+            pb-3
+        ;
+    }
 }
